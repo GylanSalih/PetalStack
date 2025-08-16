@@ -11,11 +11,11 @@
 </div>
 
 <!-- Badges Shields -->
-[contributors-shield]: https://custom-icon-badges.demolab.com/github/contributors/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&logo=group&label=Contributors&logoColor=white&style=for-the-badge&labelColor=000000
-[forks-shield]: https://custom-icon-badges.demolab.com/github/forks/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&logo=repo-forked&label=Forks&logoColor=white&style=for-the-badge&labelColor=000000
-[stars-shield]: https://custom-icon-badges.demolab.com/github/stars/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&label=Stars&style=for-the-badge&logo=star&logoColor=white&labelColor=000000
-[issues-shield]: https://custom-icon-badges.demolab.com/github/issues/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&logo=issue-opened&label=Issues&logoColor=white&labelColor=000000&style=for-the-badge
-[license-shield]: https://custom-icon-badges.demolab.com/github/license/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&logo=law&label=License&logoColor=white&style=for-the-badge&labelColor=000000
+[contributors-shield]: https://custom-icon-badges.demolab.com/github/contributors/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&logo=group&label=Contributors&logoColor=white&style=for-the-badge&labelColor=000000
+[forks-shield]: https://custom-icon-badges.demolab.com/github/forks/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&logo=repo-forked&label=Forks&logoColor=white&style=for-the-badge&labelColor=000000
+[stars-shield]: https://custom-icon-badges.demolab.com/github/stars/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&label=Stars&style=for-the-badge&logo=star&logoColor=white&labelColor=000000
+[issues-shield]: https://custom-icon-badges.demolab.com/github/issues/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&logo=issue-opened&label=Issues&logoColor=white&labelColor=000000&style=for-the-badge
+[license-shield]: https://custom-icon-badges.demolab.com/github/license/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&logo=law&label=License&logoColor=white&style=for-the-badge&labelColor=000000
 
 <!-- Badges Links -->
 [contributors-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/graphs/contributors
@@ -26,17 +26,17 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<div align="center"></div>
   <a href="https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate">
     <img src="docs/images/16.08.25_home.png" alt="PetalStack Preview" width="600">
   </a>
 
 <h3 align="center">
- 🌸 PetalStack - React TypeScript SASS Boilerplate
+ <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Cat%20with%20Heart-Eyes.png" alt="Smiling Cat with Heart-Eyes" width="25" height="25" /> PetalStack - React TypeScript SASS Boilerplate
 </h3>
 
 <p align="center">
-   A modern, production-ready React boilerplate with TypeScript, SASS, and dark mode support
+   Welcome! I would appreciate if you Star my Repository <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Cat%20with%20Heart-Eyes.png" alt="Smiling Cat with Heart-Eyes" width="25" height="25" />
     <br />
     <br />
     <a href="#getting-started"><strong>Get Started »</strong></a>
@@ -52,31 +52,28 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>📌 Table of Contents</summary>
+  <summary><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" />Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#project-structure">Project Structure</a></li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
-## 📋 About The Project
+<h2 id="about-the-project"><span style="display: inline-flex; align-items: center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> About The Project</span></h2>
 
-**PetalStack** is a modern, feature-rich React boilerplate designed to help developers start their projects quickly with best practices built-in. It combines the power of React 18, TypeScript 5.9, and SASS with a complete development setup including linting, testing, and dark mode support.
+<span>
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" alt="Robot" width="25" height="25" />
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="25" height="25" />
+Mission: Modern React TypeScript SASS Boilerplate. Crafted with passion for the #OpenSource community. Free to use and customize. Production-ready starting template that helps developers jump-start their projects quickly!
 
-This boilerplate is perfect for:
-- 🚀 **Rapid Prototyping** - Get your ideas to life quickly
-- 🏢 **Production Projects** - Enterprise-ready setup with best practices
-- 📚 **Learning** - Well-structured codebase to learn modern React patterns
-- 🎨 **Design Systems** - Built-in SASS architecture for scalable styling
+&nbsp;  <!-- Leerraum zwischen den Abschnitten -->
 
-## ✨ Features
+<h2 id="features"><span style="display: inline-flex; align-items: center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> Features</span></h2>
 
 ### 🎯 Core Technologies
 - **React 18** with modern hooks and concurrent features
@@ -106,71 +103,65 @@ This boilerplate is perfect for:
 
 <p align="right">
   <a href="#readme-top">
-    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+<img src="https://custom-icon-badges.demolab.com/badge/-Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=ffffff&labelColor=FF0000" alt="Back to top">
   </a>
 </p>
 
-## 🛠️ Built With
+<h2 id="built-with"><span style="display: inline-flex; align-items: center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> Built With</span></h2>
 
 <div align="left">
 
-![React](https://custom-icon-badges.demolab.com/badge/-React-000000?style=for-the-badge&logo=react&logoColor=ffffff&labelColor=FF6B00)
-![TypeScript](https://custom-icon-badges.demolab.com/badge/-TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=ffffff&labelColor=FF6B00)
-![Sass](https://custom-icon-badges.demolab.com/badge/-Sass-000000?style=for-the-badge&logo=sass&logoColor=ffffff&labelColor=FF6B00)
-![Vite](https://custom-icon-badges.demolab.com/badge/-Vite-000000?style=for-the-badge&logo=vite&logoColor=ffffff&labelColor=FF6B00)
-![React Router](https://custom-icon-badges.demolab.com/badge/-React%20Router-000000?style=for-the-badge&logo=react-router&logoColor=ffffff&labelColor=FF6B00)
-![ESLint](https://custom-icon-badges.demolab.com/badge/-ESLint-000000?style=for-the-badge&logo=eslint&logoColor=ffffff&labelColor=FF6B00)
-![Prettier](https://custom-icon-badges.demolab.com/badge/-Prettier-000000?style=for-the-badge&logo=prettier&logoColor=ffffff&labelColor=FF6B00)
-![Jest](https://custom-icon-badges.demolab.com/badge/-Jest-000000?style=for-the-badge&logo=jest&logoColor=ffffff&labelColor=FF6B00)
+<ul>
+  <li>
+    <img alt="React Badge" title="React" src="https://custom-icon-badges.demolab.com/badge/-React-000000?style=for-the-badge&logo=react&logoColor=ffffff&labelColor=FF0000">
+  </li>
+  <li>
+    <img alt="TypeScript Badge" title="TypeScript" src="https://custom-icon-badges.demolab.com/badge/-TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=ffffff&labelColor=FF0000">
+  </li>
+  <li>
+    <img alt="Sass Badge" title="Sass" src="https://custom-icon-badges.demolab.com/badge/-Sass-000000?style=for-the-badge&logo=sass&logoColor=ffffff&labelColor=FF0000">
+  </li>
+  <li>
+    <img alt="Vite Badge" title="Vite" src="https://custom-icon-badges.demolab.com/badge/-Vite-000000?style=for-the-badge&logo=vite&logoColor=ffffff&labelColor=FF0000">
+  </li>
+  <li>
+    <img alt="React Router Badge" title="React Router" src="https://custom-icon-badges.demolab.com/badge/-React%20Router-000000?style=for-the-badge&logo=react-router&logoColor=ffffff&labelColor=FF0000">
+  </li>
+</ul>
 
 </div>
 
 <p align="right">
   <a href="#readme-top">
-    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+<img src="https://custom-icon-badges.demolab.com/badge/-Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=ffffff&labelColor=FF0000" alt="Back to top">
   </a>
 </p>
 
-## 🚀 Getting Started
+<h2 id="getting-started"><span style="display: inline-flex; align-items: center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> Getting Started</span></h2>
 
-Get PetalStack up and running in minutes with these simple steps:
+To clone and run this application, you'll need <a href="https://git-scm.com">Git</a> and <a href="https://nodejs.org/en/download/">Node.js</a> (which includes <a href="http://npmjs.com">npm</a>) installed on your computer. Follow these steps:
 
-### Prerequisites
+<ol>
+  <li><strong>Clone the repository:</strong>
+    <pre><code>git clone https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate.git</code></pre>
+  </li>
+  <li><strong>Navigate into the repository:</strong>
+    <pre><code>cd React-TypeScript-SASS-Boilerplate</code></pre>
+  </li>
+  <li><strong>Install dependencies:</strong>
+    <pre><code>npm install</code></pre>
+    <p>or</p>
+    <pre><code>yarn install</code></pre>
+  </li>
+  <li><strong>Run the development server:</strong>
+    <pre><code>npm run dev</code></pre>
+    <p>or</p>
+    <pre><code>yarn dev</code></pre>
+  </li>
+</ol>
 
-Ensure you have the following installed:
-- **Node.js** (v16 or higher)
-- **npm** or **yarn**
-- **Git**
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate.git
-   ```
-
-2. **Navigate to the project directory**
-   ```bash
-   cd React-TypeScript-SASS-Boilerplate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-4. **Start the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. **Open your browser**
-   
-   Navigate to `http://localhost:3000` to see your application running! 🎉
+> **Note**
+> The application will be available at `http://localhost:3000`.
 
 ### Available Scripts
 
@@ -197,128 +188,19 @@ npm run test:watch   # Run tests in watch mode
 
 <p align="right">
   <a href="#readme-top">
-    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+<img src="https://custom-icon-badges.demolab.com/badge/-Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=ffffff&labelColor=FF0000" alt="Back to top">
   </a>
 </p>
 
-## 📁 Project Structure
 
-```
-src/
-├── components/              # Reusable React components
-│   ├── Header/             # Navigation header
-│   ├── Footer/             # Site footer
-│   ├── Hero/               # Hero section
-│   └── MainContent/        # Main content area
-├── contexts/               # React Context providers
-│   └── DarkModeContext.tsx # Dark mode state management
-├── Pages/                  # Route components
-│   ├── Home/              # Homepage
-│   ├── PageOne/           # Example page 1
-│   ├── PageTwo/           # Example page 2
-│   └── PageThree/         # Example page 3
-├── styles/                 # Global SASS files
-├── fonts/                  # Custom font files
-├── App.tsx                # Main application component
-├── App.module.scss        # App-specific styles
-├── index.scss             # Global styles
-└── main.tsx              # Application entry point
-```
-
-## 🎯 Usage
-
-### Creating a New Component
-
-1. **Create component directory**
-   ```bash
-   mkdir src/components/MyComponent
-   ```
-
-2. **Create TypeScript component**
-   ```typescript
-   // src/components/MyComponent/MyComponent.tsx
-   import React from 'react';
-   import styles from './MyComponent.module.scss';
-   import { useDarkMode } from '@/contexts/DarkModeContext';
-
-   interface MyComponentProps {
-     title: string;
-   }
-
-   export const MyComponent: React.FC<MyComponentProps> = ({ title }) => {
-     const { isDarkMode } = useDarkMode();
-
-     return (
-       <div className={`${styles.container} ${isDarkMode ? styles.darkMode : ''}`}>
-         <h2 className={styles.title}>{title}</h2>
-       </div>
-     );
-   };
-   ```
-
-3. **Create SASS module**
-   ```scss
-   // src/components/MyComponent/MyComponent.module.scss
-   @use '../../styles/variables' as *;
-
-   .container {
-     padding: $spacing-lg;
-     background-color: #ffffff;
-     transition: all 0.3s ease;
-   }
-
-   .title {
-     color: #333333;
-     font-size: $font-size-xl;
-   }
-
-   // Dark mode styles
-   .darkMode {
-     .container {
-       background-color: #2d2d2d;
-     }
-
-     .title {
-       color: #ffffff;
-     }
-   }
-   ```
-
-### Using Dark Mode
-
-The dark mode context is available throughout your application:
-
-```typescript
-import { useDarkMode } from '@/contexts/DarkModeContext';
-
-const MyComponent = () => {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
-
-  return (
-    <button onClick={toggleDarkMode}>
-      {isDarkMode ? '☀️' : '🌙'} Toggle Theme
-    </button>
-  );
-};
-```
-
-### Path Aliases
-
-Use clean imports with the configured path alias:
-
-```typescript
-// Instead of: import { MyComponent } from '../../components/MyComponent';
-import { MyComponent } from '@/components/MyComponent';
-import { useDarkMode } from '@/contexts/DarkModeContext';
-```
 
 <p align="right">
   <a href="#readme-top">
-    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+<img src="https://custom-icon-badges.demolab.com/badge/-Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=ffffff&labelColor=FF0000" alt="Back to top">
   </a>
 </p>
 
-## 🤝 Contributing
+## <span style="display: inline-flex; align-items: center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> Contributing</span>
 
 We welcome contributions to **PetalStack**! 🎉 Whether it's fixing bugs, improving documentation, or adding new features, your help is always appreciated.
 
@@ -357,28 +239,28 @@ We welcome contributions to **PetalStack**! 🎉 Whether it's fixing bugs, impro
 
 <p align="right">
   <a href="#readme-top">
-    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+<img src="https://custom-icon-badges.demolab.com/badge/-Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=ffffff&labelColor=FF0000" alt="Back to top">
   </a>
 </p>
 
-## 📄 License
+## <span style="display: inline-flex; align-items: center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> License</span>
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">
   <a href="#readme-top">
-    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+<img src="https://custom-icon-badges.demolab.com/badge/-Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=ffffff&labelColor=FF0000" alt="Back to top">
   </a>
 </p>
 
-## 📞 Contact
+## <span style="display: inline-flex; align-items: center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> Contact</span>
 
 <div align="center">
   <a href="https://github.com/gylansalih" target="_blank">
-    <img src="https://custom-icon-badges.demolab.com/badge/-GitHub-000000?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=FF6B00" alt="GitHub Badge">
+    <img src="https://custom-icon-badges.demolab.com/badge/-GitHub-000000?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=FF0000" alt="GitHub Badge">
   </a>
   <a href="https://www.gylansalih.com" target="_blank">
-    <img src="https://custom-icon-badges.demolab.com/badge/Website-000000?style=for-the-badge&logo=googlechrome&logoColor=ffffff&labelColor=FF6B00" alt="Website Badge">
+    <img src="https://custom-icon-badges.demolab.com/badge/Website-000000?style=for-the-badge&logo=googlechrome&logoColor=ffffff&labelColor=FF0000" alt="Website Badge">
   </a>
   <br><br>
   
@@ -386,11 +268,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
   
   <br>
   
-  💝 If you find this project helpful, please consider starring it on GitHub! Your support means a lot! ⭐
+  <p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Cat.png" alt="Grinning Cat" width="25" height="25" /> If you like this project, please consider starring it on GitHub! Your support is greatly appreciated! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Cat%20with%20Smiling%20Eyes.png" alt="Grinning Cat with Smiling Eyes" width="25" height="25" /></p>
 </div>
 
 <p align="right">
   <a href="#readme-top">
-    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+<img src="https://custom-icon-badges.demolab.com/badge/-Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=ffffff&labelColor=FF0000" alt="Back to top">
   </a>
 </p>
