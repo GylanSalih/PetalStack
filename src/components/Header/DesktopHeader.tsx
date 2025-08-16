@@ -1,45 +1,127 @@
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import styles from './DesktopHeader.module.scss';
-import { useDarkMode } from '../../contexts/DarkModeContext';
 
-// Header-Komponente für die Navigationsleiste
-export const DesktopHeader = () => {
+const DesktopHeader: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const { darkMode } = useDarkMode();
-  const logoSrc = darkMode ? '/assets/img/Logo_White.png' : '/assets/img/Logo_Black.png';
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
-    <div className={`${styles.modal} ${darkMode ? styles.darkMode : ''}`}>
-      <div className={styles.headerContainer}>
-        <header className={styles.header}>
-          {/* Logo-Bereich - klickbar für Home */}
-          <Link to="/" className={styles.logo}>
-            <img src={logoSrc} alt="Logo" className={styles.logoImg} />
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      <div className={styles.container}>
+        {/* Logo */}
+        <Link to="/" className={styles.logo}>
+          <img 
+            src="/assets/img/Logo_Black.png" 
+            alt="PetalStack Logo" 
+            className={styles.logoLight}
+            width={32}
+            height={32}
+          />
+          <img 
+            src="/assets/img/Logo_White.png" 
+            alt="PetalStack Logo" 
+            className={styles.logoDark}
+            width={32}
+            height={32}
+          />
+          <span>PetalStack</span>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className={styles.desktopNav}>
+          <Link 
+            to="/" 
+            className={`${styles.navLink} ${isActive('/') ? styles.active : ''}`}
+          >
+            Home
           </Link>
-          <div className={styles.logo}></div>
-          {/* Navigation */}
-          <nav className={styles.menu}>
-            <Link
-              to="/page-1"
-              className={`${styles.menuButton} ${location.pathname === '/page-1' ? styles.active : ''}`}
+          <Link 
+            to="/page-1" 
+            className={`${styles.navLink} ${isActive('/page-1') ? styles.active : ''}`}
+          >
+            Page 1
+          </Link>
+          <Link 
+            to="/page-2" 
+            className={`${styles.navLink} ${isActive('/page-2') ? styles.active : ''}`}
+          >
+            Page 2
+          </Link>
+          <Link 
+            to="/page-3" 
+            className={`${styles.navLink} ${isActive('/page-3') ? styles.active : ''}`}
+          >
+            Page 3
+          </Link>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className={styles.mobileMenuButton}
+          onClick={toggleMenu}
+          aria-label="Toggle mobile menu"
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Mobile Navigation */}
+        <div className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}>
+          <div className={styles.mobileNavContent}>
+            <Link 
+              to="/" 
+              className={`${styles.mobileNavLink} ${isActive('/') ? styles.active : ''}`}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/page-1" 
+              className={`${styles.mobileNavLink} ${isActive('/page-1') ? styles.active : ''}`}
             >
               Page 1
             </Link>
-            <Link
-              to="/page-2"
-              className={`${styles.menuButton} ${location.pathname === '/page-2' ? styles.active : ''}`}
+            <Link 
+              to="/page-2" 
+              className={`${styles.mobileNavLink} ${isActive('/page-2') ? styles.active : ''}`}
             >
               Page 2
             </Link>
-            <Link
-              to="/page-3"
-              className={`${styles.menuButton} ${location.pathname === '/page-3' ? styles.active : ''}`}
+            <Link 
+              to="/page-3" 
+              className={`${styles.mobileNavLink} ${isActive('/page-3') ? styles.active : ''}`}
             >
               Page 3
             </Link>
-          </nav>
-        </header>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
+
+export { DesktopHeader };

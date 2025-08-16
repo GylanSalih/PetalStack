@@ -1,32 +1,33 @@
 // App.tsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // global router
-import { DesktopHeader } from './components/Header/DesktopHeader'; // global header
-import { Footer } from './components/Footer/Footer'; // global footer
-import { Moon, Sun } from 'lucide-react'; // lucide icons import
-import { Home } from './Pages/Home/Home'; // home page
-import { PageOne } from './Pages/PageOne/PageOne';
-import { PageTwo } from './Pages/PageTwo/PageTwo';
-import { PageThree } from './Pages/PageThree/PageThree';
-import styles from './App.module.scss'; // global styles
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { DesktopHeader } from './components/Header/DesktopHeader';
+import Footer from './components/Footer/Footer';
+import { Moon, Sun } from 'lucide-react';
+import Home from './Pages/Home/Home';
+import PageOne from './Pages/PageOne/PageOne';
+import PageTwo from './Pages/PageTwo/PageTwo';
+import PageThree from './Pages/PageThree/PageThree';
+import styles from './App.module.scss';
 
-import './fonts/fonts.css'; // global fonts
-import { DarkModeProvider, useDarkMode } from './contexts/DarkModeContext'; // darkmode context
+import './fonts/fonts.css';
+import { DarkModeProvider, useDarkMode } from './contexts/DarkModeContext';
 
 const AppContent: React.FC = () => {
-  const { darkMode, toggleDarkMode } = useDarkMode();
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <div className={`${styles.app} ${darkMode ? 'darkMode' : ''}`}>
+    <div className={styles.app}>
       <Router>
         <DesktopHeader />
 
         <button
-          className={styles.darkModeButton}
+          className={styles.themeToggle}
           onClick={toggleDarkMode}
-          title={darkMode ? 'Light Mode' : 'Dark Mode'}
+          title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          aria-label={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
         >
-          {darkMode ? <Sun size={16} /> : <Moon size={16} />}
+          {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
         </button>
 
         <Routes>
