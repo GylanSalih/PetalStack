@@ -1,225 +1,396 @@
-# BV24 TypeScript React SCSS Project
+<a id="readme-top"></a>
 
-Ein sauberes TypeScript + React + SCSS-Projekt mit moderner Struktur.
+<div align="center">
 
-## 🚀 Features
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-- **TypeScript 5.9+** mit strikter Konfiguration
-- **React 18** mit modernen Hooks
-- **SCSS/Sass** mit moderner @use-Syntax
-- **Vite** für schnelle Entwicklung und Builds
-- **ESLint** für Code-Qualität
-- **Prettier** für konsistente Formatierung
-- **Lucide React** für moderne Icons
-- **Path Aliases** (`@/*` für `src/*`)
-- **Source Maps** für besseres Debugging
-- **Responsive Design** mit modernem UI
+</div>
 
-## 📦 Installation
+<!-- Badges Shields -->
+[contributors-shield]: https://custom-icon-badges.demolab.com/github/contributors/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&logo=group&label=Contributors&logoColor=white&style=for-the-badge&labelColor=000000
+[forks-shield]: https://custom-icon-badges.demolab.com/github/forks/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&logo=repo-forked&label=Forks&logoColor=white&style=for-the-badge&labelColor=000000
+[stars-shield]: https://custom-icon-badges.demolab.com/github/stars/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&label=Stars&style=for-the-badge&logo=star&logoColor=white&labelColor=000000
+[issues-shield]: https://custom-icon-badges.demolab.com/github/issues/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&logo=issue-opened&label=Issues&logoColor=white&labelColor=000000&style=for-the-badge
+[license-shield]: https://custom-icon-badges.demolab.com/github/license/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF6B00&logo=law&label=License&logoColor=white&style=for-the-badge&labelColor=000000
 
+<!-- Badges Links -->
+[contributors-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/graphs/contributors
+[forks-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/network/members
+[stars-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/stargazers
+[issues-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/issues
+[license-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/blob/main/LICENSE
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate">
+    <img src="docs/images/16.08.25_home.png" alt="PetalStack Preview" width="600">
+  </a>
+
+<h3 align="center">
+ 🌸 PetalStack - React TypeScript SASS Boilerplate
+</h3>
+
+<p align="center">
+   A modern, production-ready React boilerplate with TypeScript, SASS, and dark mode support
+    <br />
+    <br />
+    <a href="#getting-started"><strong>Get Started »</strong></a>
+    <br />
+    <br />
+    <a href="#demo">View Demo</a>
+    ·
+    <a href="https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    ·
+    <a href="https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+</p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>📌 Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#project-structure">Project Structure</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+## 📋 About The Project
+
+**PetalStack** is a modern, feature-rich React boilerplate designed to help developers start their projects quickly with best practices built-in. It combines the power of React 18, TypeScript 5.9, and SASS with a complete development setup including linting, testing, and dark mode support.
+
+This boilerplate is perfect for:
+- 🚀 **Rapid Prototyping** - Get your ideas to life quickly
+- 🏢 **Production Projects** - Enterprise-ready setup with best practices
+- 📚 **Learning** - Well-structured codebase to learn modern React patterns
+- 🎨 **Design Systems** - Built-in SASS architecture for scalable styling
+
+## ✨ Features
+
+### 🎯 Core Technologies
+- **React 18** with modern hooks and concurrent features
+- **TypeScript 5.9** with strict configuration for type safety
+- **SASS/SCSS** with CSS Modules for component-scoped styling
+- **Vite** for lightning-fast development and optimized builds
+
+### 🛠️ Development Experience
+- **Hot Module Replacement** for instant feedback during development
+- **Path Aliases** (`@/*` for `src/*`) for cleaner imports
+- **ESLint + Prettier** for consistent code quality
+- **Jest** testing framework with TypeScript support
+- **Source Maps** for enhanced debugging
+
+### 🎨 UI & UX
+- **Dark/Light Mode** with system preference detection
+- **Responsive Design** optimized for all devices
+- **Lucide React Icons** for modern, consistent iconography
+- **CSS Variables** for dynamic theming
+- **Smooth Transitions** for enhanced user experience
+
+### 📁 Architecture
+- **Component-Based** structure with SASS modules
+- **Context API** for state management (Dark Mode)
+- **React Router** for client-side navigation
+- **Modular SASS** with variables and mixins
+
+<p align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+  </a>
+</p>
+
+## 🛠️ Built With
+
+<div align="left">
+
+![React](https://custom-icon-badges.demolab.com/badge/-React-000000?style=for-the-badge&logo=react&logoColor=ffffff&labelColor=FF6B00)
+![TypeScript](https://custom-icon-badges.demolab.com/badge/-TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=ffffff&labelColor=FF6B00)
+![Sass](https://custom-icon-badges.demolab.com/badge/-Sass-000000?style=for-the-badge&logo=sass&logoColor=ffffff&labelColor=FF6B00)
+![Vite](https://custom-icon-badges.demolab.com/badge/-Vite-000000?style=for-the-badge&logo=vite&logoColor=ffffff&labelColor=FF6B00)
+![React Router](https://custom-icon-badges.demolab.com/badge/-React%20Router-000000?style=for-the-badge&logo=react-router&logoColor=ffffff&labelColor=FF6B00)
+![ESLint](https://custom-icon-badges.demolab.com/badge/-ESLint-000000?style=for-the-badge&logo=eslint&logoColor=ffffff&labelColor=FF6B00)
+![Prettier](https://custom-icon-badges.demolab.com/badge/-Prettier-000000?style=for-the-badge&logo=prettier&logoColor=ffffff&labelColor=FF6B00)
+![Jest](https://custom-icon-badges.demolab.com/badge/-Jest-000000?style=for-the-badge&logo=jest&logoColor=ffffff&labelColor=FF6B00)
+
+</div>
+
+<p align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+  </a>
+</p>
+
+## 🚀 Getting Started
+
+Get PetalStack up and running in minutes with these simple steps:
+
+### Prerequisites
+
+Ensure you have the following installed:
+- **Node.js** (v16 or higher)
+- **npm** or **yarn**
+- **Git**
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate.git
+   ```
+
+2. **Navigate to the project directory**
+   ```bash
+   cd React-TypeScript-SASS-Boilerplate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to `http://localhost:3000` to see your application running! 🎉
+
+### Available Scripts
+
+#### Development
 ```bash
-# Alle Dependencies installieren
-npm install
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
 ```
 
-## 🛠️ Verfügbare Scripts
-
-### Development
-
+#### Code Quality
 ```bash
-# Development Server starten
-npm run dev
-
-# Production Build
-npm run build
-
-# Production Build preview
-npm run preview
+npm run lint         # Run ESLint
+npm run lint:fix     # Fix ESLint issues automatically
+npm run format       # Format code with Prettier
+npm run type-check   # TypeScript type checking
 ```
 
-### Code Quality
-
+#### Testing
 ```bash
-# Code linten
-npm run lint
-
-# Code linten und automatisch korrigieren
-npm run lint:fix
-
-# Code formatieren
-npm run format
-
-# Type-Checking ohne Kompilierung
-npm run type-check
+npm test             # Run tests
+npm run test:watch   # Run tests in watch mode
 ```
 
-### Testing
+<p align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+  </a>
+</p>
 
-```bash
-# Tests ausführen
-npm test
-
-# Tests im Watch-Modus
-npm run test:watch
-```
-
-## 📁 Projektstruktur
+## 📁 Project Structure
 
 ```
 src/
-├── main.tsx                    # React-Einstiegspunkt
-├── App.tsx                     # Haupt-App-Komponente
-├── App.scss                    # App-spezifische SCSS-Styles
-├── index.scss                  # Globale SCSS-Styles
-├── styles/                     # SCSS-Variablen und Mixins
-│   └── _variables.scss        # Farben, Schatten, Breakpoints
-└── components/                 # React-Komponenten
-    ├── Header.tsx             # Header-Komponente
-    ├── Footer.tsx             # Footer-Komponente
-    └── MainContent.tsx        # Hauptinhalt-Komponente
+├── components/              # Reusable React components
+│   ├── Header/             # Navigation header
+│   ├── Footer/             # Site footer
+│   ├── Hero/               # Hero section
+│   └── MainContent/        # Main content area
+├── contexts/               # React Context providers
+│   └── DarkModeContext.tsx # Dark mode state management
+├── Pages/                  # Route components
+│   ├── Home/              # Homepage
+│   ├── PageOne/           # Example page 1
+│   ├── PageTwo/           # Example page 2
+│   └── PageThree/         # Example page 3
+├── styles/                 # Global SASS files
+├── fonts/                  # Custom font files
+├── App.tsx                # Main application component
+├── App.module.scss        # App-specific styles
+├── index.scss             # Global styles
+└── main.tsx              # Application entry point
 ```
 
-## 🔧 Konfiguration
+## 🎯 Usage
 
-### TypeScript (`tsconfig.json`)
+### Creating a New Component
 
-- Target: ES2022
-- JSX: react-jsx
-- Strict Mode aktiviert
-- Source Maps für Debugging
-- Path Aliases für bessere Imports
+1. **Create component directory**
+   ```bash
+   mkdir src/components/MyComponent
+   ```
 
-### Vite (`vite.config.ts`)
+2. **Create TypeScript component**
+   ```typescript
+   // src/components/MyComponent/MyComponent.tsx
+   import React from 'react';
+   import styles from './MyComponent.module.scss';
+   import { useDarkMode } from '@/contexts/DarkModeContext';
 
-- React-Plugin
-- SCSS-Unterstützung
-- Hot Module Replacement
-- Path Alias-Unterstützung
-- Optimierte Builds
+   interface MyComponentProps {
+     title: string;
+   }
 
-### SCSS (`src/styles/_variables.scss`)
+   export const MyComponent: React.FC<MyComponentProps> = ({ title }) => {
+     const { isDarkMode } = useDarkMode();
 
-- Zentrale Variablen-Datei
-- Farben, Schatten, Breakpoints
-- Moderne @use-Syntax
-- Wiederverwendbare Werte
+     return (
+       <div className={`${styles.container} ${isDarkMode ? styles.darkMode : ''}`}>
+         <h2 className={styles.title}>{title}</h2>
+       </div>
+     );
+   };
+   ```
 
-### ESLint (`.eslintrc.js`)
+3. **Create SASS module**
+   ```scss
+   // src/components/MyComponent/MyComponent.module.scss
+   @use '../../styles/variables' as *;
 
-- TypeScript-spezifische Regeln
-- React-spezifische Regeln
-- Prettier-Integration
-- Strenge Code-Qualitätsstandards
+   .container {
+     padding: $spacing-lg;
+     background-color: #ffffff;
+     transition: all 0.3s ease;
+   }
 
-### Prettier (`.prettierrc`)
+   .title {
+     color: #333333;
+     font-size: $font-size-xl;
+   }
 
-- Konsistente Code-Formatierung
-- 80 Zeichen Zeilenbreite
-- Single Quotes
-- Semikolons aktiviert
+   // Dark mode styles
+   .darkMode {
+     .container {
+       background-color: #2d2d2d;
+     }
 
-## 💡 Verwendung
+     .title {
+       color: #ffffff;
+     }
+   }
+   ```
 
-### Development starten
+### Using Dark Mode
 
-```bash
-npm run dev
-```
-
-Die Anwendung ist dann unter `http://localhost:3000` verfügbar.
-
-### SCSS verwenden
-
-```scss
-// In einer Komponente
-@use 'styles/variables' as *;
-
-.my-component {
-  background-color: $primary-color;
-  box-shadow: $shadow-md;
-
-  &:hover {
-    background-color: $primary-dark;
-  }
-
-  @media (max-width: $mobile) {
-    padding: 1rem;
-  }
-}
-```
-
-### Beispiel-Komponente
+The dark mode context is available throughout your application:
 
 ```typescript
-import React from 'react';
-import './MyComponent.scss';
+import { useDarkMode } from '@/contexts/DarkModeContext';
 
-interface MyComponentProps {
-  title: string;
-}
+const MyComponent = () => {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
-export const MyComponent: React.FC<MyComponentProps> = ({ title }) => {
   return (
-    <div className="my-component">
-      <h2>{title}</h2>
-      <p>Dein Inhalt hier...</p>
-    </div>
+    <button onClick={toggleDarkMode}>
+      {isDarkMode ? '☀️' : '🌙'} Toggle Theme
+    </button>
   );
 };
 ```
 
 ### Path Aliases
 
+Use clean imports with the configured path alias:
+
 ```typescript
-// Statt: import { MyComponent } from '../../components/MyComponent';
+// Instead of: import { MyComponent } from '../../components/MyComponent';
 import { MyComponent } from '@/components/MyComponent';
+import { useDarkMode } from '@/contexts/DarkModeContext';
 ```
 
-## 🎨 SCSS Features
-
-- **Variablen-System** für konsistente Farben und Werte
-- **Verschachtelte Selektoren** für bessere Organisation
-- **Mixins** für wiederverwendbare Styles
-- **Responsive Breakpoints** als Variablen
-- **Moderne @use-Syntax** statt @import
-- **Automatische Kompilierung** durch Vite
-
-## 📝 Development Workflow
-
-1. **Development Server starten**: `npm run dev`
-2. **Code schreiben** in `src/components/`
-3. **SCSS-Styles** in `src/styles/` und Komponenten-Dateien
-4. **Code formatieren**: `npm run format`
-5. **Linting**: `npm run lint`
-6. **Production Build**: `npm run build`
-
-## 🔍 Debugging
-
-Das Projekt ist mit Source Maps konfiguriert, sodass du direkt im TypeScript- und SCSS-Code debuggen kannst.
-
-### VS Code Debugging
-
-- **Debug React**: F5 → "Debug TypeScript"
-- **Debug Tests**: F5 → "Debug Tests"
-
-## 📚 Nächste Schritte
-
-- [ ] Weitere React-Komponenten hinzufügen
-- [ ] SCSS-Mixins für häufige Patterns
-- [ ] State Management (Redux, Zustand, etc.)
-- [ ] API-Integration
-- [ ] Routing (React Router)
-- [ ] Testing Library für React-Komponenten
-- [ ] Docker-Container erstellen
-- [ ] CI/CD-Pipeline einrichten
+<p align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+  </a>
+</p>
 
 ## 🤝 Contributing
 
-1. Code formatieren: `npm run format`
-2. Linting: `npm run lint`
-3. Tests: `npm test`
-4. Pull Request erstellen
+We welcome contributions to **PetalStack**! 🎉 Whether it's fixing bugs, improving documentation, or adding new features, your help is always appreciated.
 
-## 📄 Lizenz
+### How to Contribute
 
-MIT
+1. **Fork the Repository**
+2. **Create a Feature Branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Make Your Changes**
+4. **Run Quality Checks**
+   ```bash
+   npm run lint:fix
+   npm run format
+   npm run type-check
+   npm test
+   ```
+5. **Commit Your Changes**
+   ```bash
+   git commit -m "Add: Amazing new feature"
+   ```
+6. **Push to the Branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+7. **Open a Pull Request**
+
+### Contribution Guidelines
+
+- Follow the existing code style and structure
+- Write clear, descriptive commit messages
+- Add tests for new features
+- Update documentation when necessary
+- Be respectful and constructive in discussions
+
+<p align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+  </a>
+</p>
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<p align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+  </a>
+</p>
+
+## 📞 Contact
+
+<div align="center">
+  <a href="https://github.com/gylansalih" target="_blank">
+    <img src="https://custom-icon-badges.demolab.com/badge/-GitHub-000000?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=FF6B00" alt="GitHub Badge">
+  </a>
+  <a href="https://www.gylansalih.com" target="_blank">
+    <img src="https://custom-icon-badges.demolab.com/badge/Website-000000?style=for-the-badge&logo=googlechrome&logoColor=ffffff&labelColor=FF6B00" alt="Website Badge">
+  </a>
+  <br><br>
+  
+  **Project Link:** [React-TypeScript-SASS-Boilerplate](https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate)
+  
+  <br>
+  
+  💝 If you find this project helpful, please consider starring it on GitHub! Your support means a lot! ⭐
+</div>
+
+<p align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=white" alt="Back to top">
+  </a>
+</p>
