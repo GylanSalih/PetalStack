@@ -11,24 +11,25 @@
 </div>
 
 <!-- Badges Shields -->
-[contributors-shield]: https://custom-icon-badges.demolab.com/github/contributors/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&logo=group&label=Contributors&logoColor=white&style=for-the-badge&labelColor=000000
-[forks-shield]: https://custom-icon-badges.demolab.com/github/forks/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&logo=repo-forked&label=Forks&logoColor=white&style=for-the-badge&labelColor=000000
-[stars-shield]: https://custom-icon-badges.demolab.com/github/stars/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&label=Stars&style=for-the-badge&logo=star&logoColor=white&labelColor=000000
-[issues-shield]: https://custom-icon-badges.demolab.com/github/issues/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&logo=issue-opened&label=Issues&logoColor=white&labelColor=000000&style=for-the-badge
-[license-shield]: https://custom-icon-badges.demolab.com/github/license/GylanSalih/React-TypeScript-SASS-Boilerplate?color=FF0000&logo=law&label=License&logoColor=white&style=for-the-badge&labelColor=000000
+[contributors-shield]: https://custom-icon-badges.demolab.com/github/contributors/GylanSalih/PetalStack?color=FF0000&logo=group&label=Contributors&logoColor=white&style=for-the-badge&labelColor=000000
+[forks-shield]: https://custom-icon-badges.demolab.com/github/forks/GylanSalih/PetalStack?color=FF0000&logo=repo-forked&label=Forks&logoColor=white&style=for-the-badge&labelColor=000000
+[stars-shield]: https://custom-icon-badges.demolab.com/github/stars/GylanSalih/PetalStack?color=FF0000&label=Stars&style=for-the-badge&logo=star&logoColor=white&labelColor=000000
+[issues-shield]: https://custom-icon-badges.demolab.com/github/issues/GylanSalih/PetalStack?color=FF0000&logo=issue-opened&label=Issues&logoColor=white&labelColor=000000&style=for-the-badge
+[license-shield]: https://custom-icon-badges.demolab.com/github/license/GylanSalih/PetalStack?color=FF0000&logo=law&label=License&logoColor=white&style=for-the-badge&labelColor=000000
 
 <!-- Badges Links -->
-[contributors-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/graphs/contributors
-[forks-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/network/members
-[stars-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/stargazers
-[issues-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/issues
-[license-url]: https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/blob/main/LICENSE
+[contributors-url]: https://github.com/GylanSalih/PetalStack/graphs/contributors
+[forks-url]: https://github.com/GylanSalih/PetalStack/network/members
+[stars-url]: https://github.com/GylanSalih/PetalStack/stargazers
+[issues-url]: https://github.com/GylanSalih/PetalStack/issues
+[license-url]: https://github.com/GylanSalih/PetalStack/blob/main/LICENSE
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center"></div>
-  <a href="https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate">
-    <img src="docs/images/16.08.25_home.png" alt="PetalStack Preview" width="600">
+<div align="center">
+  <a href="https://github.com/GylanSalih/PetalStack">
+    <img src="docs/images/16.08.25_home.png" alt="PetalStack Preview" width="400" style="margin-right: 10px;">
+    <img src="docs/images/16.08.25_home2.png" alt="PetalStack Preview 2" width="400" style="margin-left: 10px;">
   </a>
 
 <h3 align="center">
@@ -44,9 +45,9 @@
     <br />
     <a href="#demo">View Demo</a>
     ·
-    <a href="https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/GylanSalih/PetalStack/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/GylanSalih/PetalStack/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
 </p>
 </div>
 
@@ -143,10 +144,10 @@ To clone and run this application, you'll need <a href="https://git-scm.com">Git
 
 <ol>
   <li><strong>Clone the repository:</strong>
-    <pre><code>git clone https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate.git</code></pre>
+    <pre><code>git clone https://github.com/GylanSalih/PetalStack.git</code></pre>
   </li>
   <li><strong>Navigate into the repository:</strong>
-    <pre><code>cd React-TypeScript-SASS-Boilerplate</code></pre>
+    <pre><code>cd PetalStack</code></pre>
   </li>
   <li><strong>Install dependencies:</strong>
     <pre><code>npm install</code></pre>
@@ -162,29 +163,6 @@ To clone and run this application, you'll need <a href="https://git-scm.com">Git
 
 > **Note**
 > The application will be available at `http://localhost:3000`.
-
-### Available Scripts
-
-#### Development
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-```
-
-#### Code Quality
-```bash
-npm run lint         # Run ESLint
-npm run lint:fix     # Fix ESLint issues automatically
-npm run format       # Format code with Prettier
-npm run type-check   # TypeScript type checking
-```
-
-#### Testing
-```bash
-npm test             # Run tests
-npm run test:watch   # Run tests in watch mode
-```
 
 <p align="right">
   <a href="#readme-top">
@@ -264,9 +242,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
   </a>
   <br><br>
   
-  **Project Link:** [React-TypeScript-SASS-Boilerplate](https://github.com/GylanSalih/React-TypeScript-SASS-Boilerplate)
-  
-  <br>
+
   
   <p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Cat.png" alt="Grinning Cat" width="25" height="25" /> If you like this project, please consider starring it on GitHub! Your support is greatly appreciated! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Cat%20with%20Smiling%20Eyes.png" alt="Grinning Cat with Smiling Eyes" width="25" height="25" /></p>
 </div>
