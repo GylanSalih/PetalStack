@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram, Twitter, Linkedin, Github, Globe } from 'lucide-react';
 import styles from './DesktopHeader.module.scss';
 
 const DesktopHeader: React.FC = () => {
@@ -92,31 +92,82 @@ const DesktopHeader: React.FC = () => {
 
         {/* Mobile Navigation */}
         <div className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}>
+          {/* Close Button */}
+          <button 
+            className={styles.mobileCloseButton}
+            onClick={toggleMenu}
+            aria-label="Close mobile menu"
+          >
+            <X size={24} />
+          </button>
+
           <div className={styles.mobileNavContent}>
-            <Link 
-              to="/" 
-              className={`${styles.mobileNavLink} ${isActive('/') ? styles.active : ''}`}
-            >
-              Home
-            </Link>
-            <Link 
-              to="/page-1" 
-              className={`${styles.mobileNavLink} ${isActive('/page-1') ? styles.active : ''}`}
-            >
-              Page 1
-            </Link>
-            <Link 
-              to="/page-2" 
-              className={`${styles.mobileNavLink} ${isActive('/page-2') ? styles.active : ''}`}
-            >
-              Page 2
-            </Link>
-            <Link 
-              to="/page-3" 
-              className={`${styles.mobileNavLink} ${isActive('/page-3') ? styles.active : ''}`}
-            >
-              Page 3
-            </Link>
+            {/* Navigation Links */}
+            <div className={styles.mobileNavLinks}>
+              <Link 
+                to="/" 
+                className={`${styles.mobileNavLink} ${isActive('/') ? styles.active : ''}`}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/page-1" 
+                className={`${styles.mobileNavLink} ${isActive('/page-1') ? styles.active : ''}`}
+              >
+                Page 1
+              </Link>
+              <Link 
+                to="/page-2" 
+                className={`${styles.mobileNavLink} ${isActive('/page-2') ? styles.active : ''}`}
+              >
+                Page 2
+              </Link>
+              <Link 
+                to="/page-3" 
+                className={`${styles.mobileNavLink} ${isActive('/page-3') ? styles.active : ''}`}
+              >
+                Page 3
+              </Link>
+            </div>
+
+            {/* Social Icons */}
+            <div className={styles.socialIcons}>
+              <a 
+                href="#" 
+                className={styles.socialIcon}
+                aria-label="Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+              <a 
+                href="#" 
+                className={styles.socialIcon}
+                aria-label="Twitter"
+              >
+                <Twitter size={24} />
+              </a>
+              <a 
+                href="#" 
+                className={styles.socialIcon}
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a 
+                href="#" 
+                className={styles.socialIcon}
+                aria-label="GitHub"
+              >
+                <Github size={24} />
+              </a>
+              <a 
+                href="#" 
+                className={styles.socialIcon}
+                aria-label="Website"
+              >
+                <Globe size={24} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
