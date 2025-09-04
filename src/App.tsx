@@ -8,6 +8,7 @@ import Home from './Pages/Home/Home';
 import PageOne from './Pages/PageOne/PageOne';
 import PageTwo from './Pages/PageTwo/PageTwo';
 import PageThree from './Pages/PageThree/PageThree';
+import Grids from './Pages/Grids/Grids';
 import styles from './App.module.scss';
 
 import './fonts/fonts.css';
@@ -35,6 +36,7 @@ const AppContent: React.FC = () => {
           <Route path="/page-1" element={<PageOne />} />
           <Route path="/page-2" element={<PageTwo />} />
           <Route path="/page-3" element={<PageThree />} />
+          <Route path="/grids" element={<Grids />} />
         </Routes>
 
         <Footer />
