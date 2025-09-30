@@ -1,0 +1,524 @@
+// Blog Post Styles
+.blogPost {
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  &.dark {
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  
+  @media (max-width: 768px) {
+    padding: 1rem 0.5rem;
+  }
+}
+
+// Loading
+.loading {
+  text-align: center;
+  padding: 4rem 1rem;
+  
+  h2 {
+    color: var(--color-muted-foreground);
+  }
+}
+
+// Back Button
+.backButton {
+  margin-bottom: 2rem;
+  
+  .backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-muted-foreground);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: var(--color-primary);
+    }
+    
+    .backIcon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
+
+// Article Header
+.articleHeader {
+  margin-bottom: 3rem;
+  
+  .categoryBadge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+  }
+  
+  .articleTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--color-foreground);
+    
+    @media (max-width: 768px) {
+      font-size: 2.25rem;
+    }
+  }
+  
+  .articleExcerpt {
+    font-size: 1.25rem;
+    color: var(--color-muted-foreground);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.125rem;
+    }
+  }
+  
+  .articleMeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+  
+  .authorInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    .authorAvatar {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .authorDetails {
+      display: flex;
+      flex-direction: column;
+      
+      .authorName {
+        font-weight: 600;
+        color: var(--color-foreground);
+        margin-bottom: 0.25rem;
+      }
+      
+      .authorBio {
+        font-size: 0.875rem;
+        color: var(--color-muted-foreground);
+      }
+    }
+  }
+  
+  .metaInfo {
+    display: flex;
+    gap: 1.5rem;
+    
+    .metaItem {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-muted-foreground);
+      font-size: 0.875rem;
+      
+      .metaIcon {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+  
+  .articleActions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+// Action Buttons
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--color-accent);
+    transform: translateY(-1px);
+  }
+  
+  &.actionButtonActive {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+  
+  .actionIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+// Featured Image
+.featuredImage {
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  
+  .featuredImageImg {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+    @media (max-width: 768px) {
+      height: 250px;
+    }
+  }
+}
+
+// Article Content
+.articleContent {
+  margin-bottom: 3rem;
+  
+  .content {
+    line-height: 1.8;
+    font-size: 1.125rem;
+    color: var(--color-foreground);
+    
+    // Content typography
+    .contentH1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 2rem 0 1rem 0;
+      color: var(--color-foreground);
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+    
+    .contentH2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 1.5rem 0 1rem 0;
+      color: var(--color-foreground);
+      
+      @media (max-width: 768px) {
+        font-size: 1.75rem;
+      }
+    }
+    
+    .contentH3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.75rem 0;
+      color: var(--color-foreground);
+      
+      @media (max-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
+    
+    .contentP {
+      margin-bottom: 1.5rem;
+      color: var(--color-muted-foreground);
+    }
+    
+    .contentLi {
+      margin-bottom: 0.5rem;
+      color: var(--color-muted-foreground);
+      list-style: none;
+      position: relative;
+      padding-left: 1.5rem;
+      
+      &::before {
+        content: '•';
+        color: var(--color-primary);
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+    }
+    
+    .contentStrong {
+      font-weight: 700;
+      color: var(--color-foreground);
+    }
+    
+    .contentCodeBlock {
+      background: var(--color-secondary);
+      color: var(--color-secondary-foreground);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-family: 'SF Mono', Monaco, 'Inconsolata', 'Roboto Mono', monospace;
+      font-size: 0.875rem;
+      margin: 1rem 0;
+      border: 1px solid var(--color-border);
+    }
+  }
+}
+
+// Tags Section
+.tagsSection {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  
+  .tagsTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-foreground);
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-secondary);
+    color: var(--color-secondary-foreground);
+    border-radius: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    
+    .tagIcon {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+// Author Bio Section
+.authorBioSection {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  
+  .authorBioTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--color-foreground);
+  }
+  
+  .authorBioContent {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .authorBioAvatar {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    
+    .authorBioText {
+      flex: 1;
+      
+      .authorBioName {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--color-foreground);
+      }
+      
+      .authorBioDescription {
+        color: var(--color-muted-foreground);
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// Related Posts
+.relatedPosts {
+  margin-bottom: 3rem;
+  
+  .relatedPostsTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-foreground);
+  }
+  
+  .relatedPostsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .relatedPostCard {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-color: var(--color-primary);
+    }
+    
+    .relatedPostImage {
+      height: 150px;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+    
+    .relatedPostContent {
+      padding: 1.25rem;
+      
+      .relatedPostTitle {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+        
+        a {
+          color: var(--color-foreground);
+          text-decoration: none;
+          transition: color 0.2s ease;
+          
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+      }
+      
+      .relatedPostExcerpt {
+        color: var(--color-muted-foreground);
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      
+      .relatedPostMeta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.75rem;
+        color: var(--color-muted-foreground);
+        
+        .relatedPostDate,
+        .relatedPostReadTime {
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+// Dark mode specific adjustments
+.dark {
+  .articleContent {
+    .content {
+      .contentCodeBlock {
+        background: var(--color-secondary);
+        color: var(--color-secondary-foreground);
+        border-color: var(--color-border);
+      }
+    }
+  }
+  
+  .authorBioSection {
+    background: var(--color-card);
+    border-color: var(--color-border);
+  }
+  
+  .relatedPostCard {
+    background: var(--color-card);
+    border-color: var(--color-border);
+    
+    &:hover {
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+    }
+  }
+  
+  .actionButton {
+    background: var(--color-secondary);
+    color: var(--color-secondary-foreground);
+    
+    &:hover {
+      background: var(--color-accent);
+    }
+    
+    &.actionButtonActive {
+      background: var(--color-primary);
+      color: var(--color-primary-foreground);
+    }
+  }
+}

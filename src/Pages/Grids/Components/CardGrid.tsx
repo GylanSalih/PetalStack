@@ -11,7 +11,7 @@ const CardGrid: React.FC = () => {
       author: "Max Mustermann",
       date: "15. März 2024",
       readTime: "5 min",
-      image: "/public/assets/img/Projects/project1.webp",
+      image: "/public/assets/img/placeholder.svg",
       category: "Development"
     },
     {
@@ -21,7 +21,7 @@ const CardGrid: React.FC = () => {
       author: "Anna Schmidt",
       date: "12. März 2024",
       readTime: "8 min",
-      image: "/public/assets/img/Projects/project2.jpg",
+      image: "/public/assets/img/placeholder.svg",
       category: "Design"
     },
     {
@@ -31,7 +31,7 @@ const CardGrid: React.FC = () => {
       author: "Tom Weber",
       date: "10. März 2024",
       readTime: "12 min",
-      image: "/public/assets/img/Projects/project3.webp",
+      image: "/public/assets/img/placeholder.svg",
       category: "React"
     },
     {
@@ -41,7 +41,7 @@ const CardGrid: React.FC = () => {
       author: "Lisa Müller",
       date: "8. März 2024",
       readTime: "6 min",
-      image: "/public/assets/img/Projects/project4.webp",
+      image: "/public/assets/img/placeholder.svg",
       category: "CSS"
     },
     {
@@ -51,7 +51,7 @@ const CardGrid: React.FC = () => {
       author: "David Klein",
       date: "5. März 2024",
       readTime: "10 min",
-      image: "/public/assets/img/Projects/project5.webp",
+      image: "/public/assets/img/placeholder.svg",
       category: "TypeScript"
     },
     {
@@ -61,7 +61,7 @@ const CardGrid: React.FC = () => {
       author: "Sarah Johnson",
       date: "3. März 2024",
       readTime: "7 min",
-      image: "/public/assets/img/Projects/project6.webp",
+      image: "/public/assets/img/placeholder.svg",
       category: "Accessibility"
     }
   ];

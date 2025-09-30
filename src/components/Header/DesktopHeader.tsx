@@ -85,6 +85,12 @@ const DesktopHeader: React.FC = () => {
           >
             Grids
           </Link>
+          <Link 
+            to="/blog" 
+            className={`${styles.navLink} ${isActive('/blog') ? styles.active : ''}`}
+          >
+            Blog
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -139,6 +145,12 @@ const DesktopHeader: React.FC = () => {
                 className={`${styles.mobileNavLink} ${isActive('/grids') ? styles.active : ''}`}
               >
                 Grids
+              </Link>
+              <Link 
+                to="/blog" 
+                className={`${styles.mobileNavLink} ${isActive('/blog') ? styles.active : ''}`}
+              >
+                Blog
               </Link>
             </div>
 

@@ -1,14 +1,18 @@
 // App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { DesktopHeader } from './components/Header/DesktopHeader';
-import Footer from './components/Footer/Footer';
+import { DesktopHeader } from './components/header/DesktopHeader';
+import Footer from './components/footer/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { Moon, Sun } from 'lucide-react';
-import Home from './Pages/Home/Home';
-import PageOne from './Pages/PageOne/PageOne';
-import PageTwo from './Pages/PageTwo/PageTwo';
-import PageThree from './Pages/PageThree/PageThree';
-import Grids from './Pages/Grids/Grids';
+import Home from './pages/Home/Home';
+import PageOne from './pages/PageOne/PageOne';
+import PageTwo from './pages/PageTwo/PageTwo';
+import PageThree from './pages/PageThree/PageThree';
+import Grids from './pages/Grids/Grids';
+import Blog from './pages/Blog/Blog';
+import BlogGrid from './pages/Blog/BlogGrid/blogGrid';
+import BlogPost from './pages/Blog/BlogPost/blogPost';
 import styles from './App.module.scss';
 
 import './fonts/fonts.css';
@@ -20,6 +24,7 @@ const AppContent: React.FC = () => {
   return (
     <div className={styles.app}>
       <Router>
+        <ScrollToTop />
         <DesktopHeader />
 
         <button
@@ -37,6 +42,9 @@ const AppContent: React.FC = () => {
           <Route path="/page-2" element={<PageTwo />} />
           <Route path="/page-3" element={<PageThree />} />
           <Route path="/grids" element={<Grids />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/grid" element={<BlogGrid />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
 
         <Footer />
