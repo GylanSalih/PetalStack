@@ -1,16 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Users, Calendar, Code, X } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Calendar } from 'lucide-react';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { blogPosts, blogCategories } from '../../data/blogData';
-import { blogJsonData, getPostById, getAuthorById, getCategoryById } from '../../data/blogJsonData';
-import JsonViewer from '../../components/json-viewer/JsonViewer';
 import styles from './Blog.module.scss';
 
 const Blog = (): React.ReactElement => {
   const { isDarkMode } = useDarkMode();
-  const [selectedPostId, setSelectedPostId] = useState<string | null>(null);
-  const [showJsonViewer, setShowJsonViewer] = useState(false);
   
   // Get latest posts
   const latestPosts = blogPosts
@@ -27,46 +23,6 @@ const Blog = (): React.ReactElement => {
   const getCategoryColor = (category: string) => {
     const categoryData = blogCategories.find(cat => cat.slug === category);
     return categoryData?.color || '#6B7280';
-  };
-
-  const handlePostClick = (postId: string) => {
-    setSelectedPostId(postId);
-    setShowJsonViewer(true);
-  };
-
-  const handleCloseJsonViewer = () => {
-    setShowJsonViewer(false);
-    setSelectedPostId(null);
-  };
-
-  const getPostJsonData = () => {
-    if (!selectedPostId) return null;
-    
-    const post = getPostById(selectedPostId);
-    if (!post) return null;
-
-    const author = getAuthorById(post.author.id);
-    const category = getCategoryById(
-      blogJsonData.categories.find(cat => cat.slug === post.category)?.id || ''
-    );
-
-    return {
-      post: {
-        ...post,
-        author: author,
-        category: category
-      },
-      metadata: {
-        generatedAt: new Date().toISOString(),
-        source: "PetalStack Blog System",
-        version: "1.0.0"
-      },
-      analytics: {
-        totalViews: blogJsonData.analytics.totalViews,
-        totalPosts: blogJsonData.analytics.totalViews,
-        engagementRate: blogJsonData.analytics.engagementRate
-      }
-    };
   };
 
   return (
@@ -157,57 +113,16 @@ const Blog = (): React.ReactElement => {
                     )}
                   </div>
                   
-                  <div className={styles.postActions}>
-                    <Link to={`/blog/${post.slug}`} className={styles.readMore}>
-                      Read More
-                      <ArrowRight className={styles.readMoreIcon} />
-                    </Link>
-                    <button
-                      className={styles.jsonButton}
-                      onClick={() => handlePostClick(post.id)}
-                      title="View JSON Data"
-                    >
-                      <Code className={styles.jsonIcon} />
-                      JSON
-                    </button>
-                  </div>
+                  <Link to={`/blog/${post.slug}`} className={styles.readMore}>
+                    Read More
+                    <ArrowRight className={styles.readMoreIcon} />
+                  </Link>
                 </div>
               </article>
             ))}
           </div>
         </section>
       </div>
-
-      {/* JSON Viewer Modal */}
-      {showJsonViewer && selectedPostId && (
-        <div className={styles.jsonModal}>
-          <div className={styles.jsonModalContent}>
-            <div className={styles.jsonModalHeader}>
-              <h3 className={styles.jsonModalTitle}>
-                <Code className={styles.jsonModalIcon} />
-                JSON Data for Post
-              </h3>
-              <button
-                className={styles.jsonModalClose}
-                onClick={handleCloseJsonViewer}
-                title="Close JSON Viewer"
-              >
-                <X size={20} />
-              </button>
-            </div>
-            <div className={styles.jsonModalBody}>
-              <JsonViewer
-                data={getPostJsonData()}
-                title={`Post ID: ${selectedPostId}`}
-                showCopyButton={true}
-                showToggleButton={true}
-                defaultExpanded={true}
-                maxHeight="70vh"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Filter, Calendar, User, Clock, Tag, Code, X } from 'lucide-react';
+import { Search, Filter, Calendar, User, Clock, Tag } from 'lucide-react';
 import { useDarkMode } from '../../../contexts/DarkModeContext';
 import { BlogPost, BlogCategory, BlogFilters } from '../../../types/blog';
 import { blogPosts, blogCategories, searchBlogPosts, getBlogPostsByCategory, getBlogPostsByTag } from '../../../data/blogData';
-import { blogJsonData, getPostById, getAuthorById, getCategoryById } from '../../../data/blogJsonData';
-import JsonViewer from '../../../components/json-viewer/JsonViewer';
 import styles from './BlogGrid.module.scss';
 
 const BlogGrid = (): React.ReactElement => {
@@ -17,8 +15,6 @@ const BlogGrid = (): React.ReactElement => {
   const [selectedTag, setSelectedTag] = useState<string>('');
   const [currentPage, setCurrentPage] = useState(1);
   const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'popular'>('newest');
-  const [selectedPostId, setSelectedPostId] = useState<string | null>(null);
-  const [showJsonViewer, setShowJsonViewer] = useState(false);
   const postsPerPage = 6;
 
   // Get all unique tags from posts
@@ -100,46 +96,6 @@ const BlogGrid = (): React.ReactElement => {
     setSelectedCategory('');
     setSelectedTag('');
     setSortBy('newest');
-  };
-
-  const handlePostClick = (postId: string) => {
-    setSelectedPostId(postId);
-    setShowJsonViewer(true);
-  };
-
-  const handleCloseJsonViewer = () => {
-    setShowJsonViewer(false);
-    setSelectedPostId(null);
-  };
-
-  const getPostJsonData = () => {
-    if (!selectedPostId) return null;
-    
-    const post = getPostById(selectedPostId);
-    if (!post) return null;
-
-    const author = getAuthorById(post.author.id);
-    const category = getCategoryById(
-      blogJsonData.categories.find(cat => cat.slug === post.category)?.id || ''
-    );
-
-    return {
-      post: {
-        ...post,
-        author: author,
-        category: category
-      },
-      metadata: {
-        generatedAt: new Date().toISOString(),
-        source: "PetalStack Blog System",
-        version: "1.0.0"
-      },
-      analytics: {
-        totalViews: blogJsonData.analytics.totalViews,
-        totalPosts: blogJsonData.analytics.totalViews,
-        engagementRate: blogJsonData.analytics.engagementRate
-      }
-    };
   };
 
   const formatDate = (dateString: string) => {
@@ -300,19 +256,9 @@ const BlogGrid = (): React.ReactElement => {
                     )}
                   </div>
 
-                  <div className={styles.postActions}>
-                    <Link to={`/blog/${post.slug}`} className={styles.readMore}>
-                      Read More →
-                    </Link>
-                    <button
-                      className={styles.jsonButton}
-                      onClick={() => handlePostClick(post.id)}
-                      title="View JSON Data"
-                    >
-                      <Code className={styles.jsonIcon} />
-                      JSON
-                    </button>
-                  </div>
+                  <Link to={`/blog/${post.slug}`} className={styles.readMore}>
+                    Read More →
+                  </Link>
                 </div>
               </article>
             ))}
@@ -362,37 +308,6 @@ const BlogGrid = (): React.ReactElement => {
           </div>
         )}
       </div>
-
-      {/* JSON Viewer Modal */}
-      {showJsonViewer && selectedPostId && (
-        <div className={styles.jsonModal}>
-          <div className={styles.jsonModalContent}>
-            <div className={styles.jsonModalHeader}>
-              <h3 className={styles.jsonModalTitle}>
-                <Code className={styles.jsonModalIcon} />
-                JSON Data for Post
-              </h3>
-              <button
-                className={styles.jsonModalClose}
-                onClick={handleCloseJsonViewer}
-                title="Close JSON Viewer"
-              >
-                <X size={20} />
-              </button>
-            </div>
-            <div className={styles.jsonModalBody}>
-              <JsonViewer
-                data={getPostJsonData()}
-                title={`Post ID: ${selectedPostId}`}
-                showCopyButton={true}
-                showToggleButton={true}
-                defaultExpanded={true}
-                maxHeight="70vh"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
