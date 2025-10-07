@@ -1,18 +1,18 @@
 // App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { DesktopHeader } from './components/header/DesktopHeader';
-import Footer from './components/footer/Footer';
+import { DesktopHeader } from './components/Header/DesktopHeader';
+import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import { Moon, Sun } from 'lucide-react';
-import Home from './pages/Home/Home';
-import PageOne from './pages/PageOne/PageOne';
-import PageTwo from './pages/PageTwo/PageTwo';
-import PageThree from './pages/PageThree/PageThree';
-import Grids from './pages/Grids/Grids';
-import Blog from './pages/Blog/Blog';
-import BlogGrid from './pages/Blog/BlogGrid/blogGrid';
-import BlogPost from './pages/Blog/BlogPost/blogPost';
+import Home from './Pages/Home/Home';
+import PageOne from './Pages/PageOne/PageOne';
+import PageTwo from './Pages/PageTwo/PageTwo';
+import PageThree from './Pages/PageThree/PageThree';
+import Grids from './Pages/Grids/Grids';
+import Blog from './Pages/Blog/Blog';
+import BlogGrid from './Pages/Blog/BlogGrid/blogGrid';
+import BlogPost from './Pages/Blog/BlogPost/blogPost';
 import styles from './App.module.scss';
 
 import './fonts/fonts.css';
