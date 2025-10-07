@@ -2,7 +2,7 @@ import React from 'react';
 import { Heart, MessageCircle, Share, Bookmark } from 'lucide-react';
 import styles from './MasonryGrid.module.scss';
 
-const MasonryGrid: React.FC = () => {
+const MasonryGrid = (): React.ReactElement => {
   const pins = [
     {
       id: 1,

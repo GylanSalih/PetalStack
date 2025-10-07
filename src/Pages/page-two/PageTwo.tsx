@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Star, Users, TrendingUp, Award } from 'lucide-react';
 import styles from './PageTwo.module.scss';
 
-const PageTwo: React.FC = () => {
+const PageTwo = (): React.ReactElement => {
   return (
     <div className={styles.pageTwo}>
       <div className={styles.container}>

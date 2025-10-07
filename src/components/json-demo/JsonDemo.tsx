@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Code, Database, Eye } from 'lucide-react';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { blogJsonData } from '../../data/blogJsonData';
-import JsonViewer from '../JsonViewer/JsonViewer';
+import JsonViewer from '../json-viewer/JsonViewer';
 import styles from './JsonDemo.module.scss';
 
-const JsonDemo: React.FC = () => {
+const JsonDemo = (): React.ReactElement => {
   const { isDarkMode } = useDarkMode();
   const [selectedData, setSelectedData] = useState<string>('metadata');
   const [showJsonViewer, setShowJsonViewer] = useState(false);

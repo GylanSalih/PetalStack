@@ -4,10 +4,10 @@ import { ArrowRight, BookOpen, Users, Calendar, Code, X } from 'lucide-react';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { blogPosts, blogCategories } from '../../data/blogData';
 import { blogJsonData, getPostById, getAuthorById, getCategoryById } from '../../data/blogJsonData';
-import JsonViewer from '../../components/JsonViewer/JsonViewer';
+import JsonViewer from '../../components/json-viewer/JsonViewer';
 import styles from './Blog.module.scss';
 
-const Blog: React.FC = () => {
+const Blog = (): React.ReactElement => {
   const { isDarkMode } = useDarkMode();
   const [selectedPostId, setSelectedPostId] = useState<string | null>(null);
   const [showJsonViewer, setShowJsonViewer] = useState(false);

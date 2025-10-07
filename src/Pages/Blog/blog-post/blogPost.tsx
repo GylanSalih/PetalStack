@@ -4,9 +4,9 @@ import { ArrowLeft, Calendar, User, Clock, Tag, Share2, Bookmark, Heart } from '
 import { useDarkMode } from '../../../contexts/DarkModeContext';
 import { BlogPost as BlogPostType } from '../../../types/blog';
 import { getBlogPostBySlug, blogPosts, blogCategories } from '../../../data/blogData';
-import styles from './blogPost.module.scss';
+import styles from './BlogPost.module.scss';
 
-const BlogPost: React.FC = () => {
+const BlogPost = (): React.ReactElement => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const { isDarkMode } = useDarkMode();

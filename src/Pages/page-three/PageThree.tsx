@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Zap, Shield, Code, Rocket } from 'lucide-react';
 import styles from './PageThree.module.scss';
 
-const PageThree: React.FC = () => {
+const PageThree = (): React.ReactElement => {
   return (
     <div className={styles.pageThree}>
       <div className={styles.container}>

@@ -12,14 +12,14 @@ interface JsonViewerProps {
   maxHeight?: string;
 }
 
-const JsonViewer: React.FC<JsonViewerProps> = ({
+const JsonViewer = ({
   data,
   title = "JSON Data",
   showCopyButton = true,
   showToggleButton = true,
   defaultExpanded = true,
   maxHeight = "500px"
-}) => {
+}: JsonViewerProps): React.ReactElement => {
   const { isDarkMode } = useDarkMode();
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [copied, setCopied] = useState(false);

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Twitter, Linkedin, Github, Globe } from 'lucide-react';
 import styles from './DesktopHeader.module.scss';
 
-const DesktopHeader: React.FC = () => {
+const DesktopHeader = (): React.ReactElement => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();

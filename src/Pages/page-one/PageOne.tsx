@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Code, Zap, Shield, Palette } from 'lucide-react';
 import styles from './PageOne.module.scss';
 
-const PageOne: React.FC = () => {
+const PageOne = (): React.ReactElement => {
   return (
     <div className={styles.pageOne}>
       <div className={styles.container}>

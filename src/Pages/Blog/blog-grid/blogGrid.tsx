@@ -5,10 +5,10 @@ import { useDarkMode } from '../../../contexts/DarkModeContext';
 import { BlogPost, BlogCategory, BlogFilters } from '../../../types/blog';
 import { blogPosts, blogCategories, searchBlogPosts, getBlogPostsByCategory, getBlogPostsByTag } from '../../../data/blogData';
 import { blogJsonData, getPostById, getAuthorById, getCategoryById } from '../../../data/blogJsonData';
-import JsonViewer from '../../../components/JsonViewer/JsonViewer';
-import styles from './blogGrid.module.scss';
+import JsonViewer from '../../../components/json-viewer/JsonViewer';
+import styles from './BlogGrid.module.scss';
 
-const BlogGrid: React.FC = () => {
+const BlogGrid = (): React.ReactElement => {
   const { isDarkMode } = useDarkMode();
   const [posts, setPosts] = useState<BlogPost[]>(blogPosts);
   const [filters, setFilters] = useState<BlogFilters>({});

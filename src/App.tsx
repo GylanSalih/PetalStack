@@ -1,24 +1,24 @@
 // App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { DesktopHeader } from './components/Header/DesktopHeader';
-import Footer from './components/Footer/Footer';
+import { DesktopHeader } from './components/header/DesktopHeader';
+import Footer from './components/footer/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import { Moon, Sun } from 'lucide-react';
-import Home from './Pages/Home/Home';
-import PageOne from './Pages/PageOne/PageOne';
-import PageTwo from './Pages/PageTwo/PageTwo';
-import PageThree from './Pages/PageThree/PageThree';
-import Grids from './Pages/Grids/Grids';
-import Blog from './Pages/Blog/Blog';
-import BlogGrid from './Pages/Blog/BlogGrid/blogGrid';
-import BlogPost from './Pages/Blog/BlogPost/blogPost';
+import Home from './pages/home/Home';
+import PageOne from './pages/page-one/PageOne';
+import PageTwo from './pages/page-two/PageTwo';
+import PageThree from './pages/page-three/PageThree';
+import Grids from './pages/grids/Grids';
+import Blog from './pages/blog/Blog';
+import BlogGrid from './pages/blog/blog-grid/BlogGrid';
+import BlogPost from './pages/blog/blog-post/BlogPost';
 import styles from './App.module.scss';
 
 import './fonts/fonts.css';
 import { DarkModeProvider, useDarkMode } from './contexts/DarkModeContext';
 
-const AppContent: React.FC = () => {
+const AppContent = (): React.ReactElement => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
@@ -53,7 +53,7 @@ const AppContent: React.FC = () => {
   );
 };
 
-const App: React.FC = () => {
+const App = (): React.ReactElement => {
   return (
     <DarkModeProvider>
       <AppContent />

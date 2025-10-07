@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const MainContent: React.FC = () => {
+export const MainContent = (): React.ReactElement => {
   return (
     <main className="container page">
       <section className="stack">

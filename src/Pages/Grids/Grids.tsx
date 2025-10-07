@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Grids.module.scss';
-import CardGrid from './Components/CardGrid';
-import MasonryGrid from './Components/MasonryGrid';
+import CardGrid from './components/CardGrid';
+import MasonryGrid from './components/MasonryGrid';
 
-const Grids: React.FC = () => {
+const Grids = (): React.ReactElement => {
   return (
     <div className={styles.gridsPage}>
       <div className={styles.container}>

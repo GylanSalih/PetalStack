@@ -2,7 +2,7 @@ import React from 'react';
 import { Calendar, User, Clock, ArrowRight } from 'lucide-react';
 import styles from './CardGrid.module.scss';
 
-const CardGrid: React.FC = () => {
+const CardGrid = (): React.ReactElement => {
   const cards = [
     {
       id: 1,
