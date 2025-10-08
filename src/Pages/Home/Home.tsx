@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, Code, Palette, Rocket, Sparkles } from 'lucide-react';
-import Hero from '../../components/hero/Hero';
-import styles from './Home.module.scss';
+import Hero from '../../components/hero/hero';
+import styles from './home.module.scss';
 
 const Home = (): React.ReactElement => {
   return (

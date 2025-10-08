@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Calendar, User, Clock, Tag, Share2, Bookmark, Heart } from 'lucide-react';
-import { useDarkMode } from '../../../contexts/DarkModeContext';
+import { ArrowLeft, Calendar, Clock, Tag, Share2, Bookmark, Heart } from 'lucide-react';
+import { useDarkMode } from '../../../contexts/darkModeContext';
 import { BlogPost as BlogPostType } from '../../../types/blog';
 import { getBlogPostBySlug, blogPosts, blogCategories } from '../../../data/blogData';
-import styles from './BlogPost.module.scss';
+import styles from './blogPost.module.scss';
 
 const BlogPost = (): React.ReactElement => {
   const { slug } = useParams<{ slug: string }>();

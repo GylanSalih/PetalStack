@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Star, Users, TrendingUp, Award } from 'lucide-react';
-import styles from './PageTwo.module.scss';
+import styles from './pageTwo.module.scss';
 
 const PageTwo = (): React.ReactElement => {
   return (

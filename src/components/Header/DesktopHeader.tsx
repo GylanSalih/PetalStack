@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Twitter, Linkedin, Github, Globe } from 'lucide-react';
-import styles from './DesktopHeader.module.scss';
+import styles from './desktopHeader.module.scss';
 
 const DesktopHeader = (): React.ReactElement => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

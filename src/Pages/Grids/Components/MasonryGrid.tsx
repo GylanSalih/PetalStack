@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, MessageCircle, Share, Bookmark } from 'lucide-react';
-import styles from './MasonryGrid.module.scss';
+import styles from './masonryGrid.module.scss';
 
 const MasonryGrid = (): React.ReactElement => {
   const pins = [

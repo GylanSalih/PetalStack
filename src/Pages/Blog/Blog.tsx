@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Users, Calendar } from 'lucide-react';
-import { useDarkMode } from '../../contexts/DarkModeContext';
+import { useDarkMode } from '../../contexts/darkModeContext';
 import { blogPosts, blogCategories } from '../../data/blogData';
-import styles from './Blog.module.scss';
+import styles from './blog.module.scss';
 
 const Blog = (): React.ReactElement => {
   const { isDarkMode } = useDarkMode();

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import styles from './Hero.module.scss';
+import styles from './hero.module.scss';
 
 const Hero = (): React.ReactElement => {
   const displayCode = `import React, { useState, useEffect } from 'react';

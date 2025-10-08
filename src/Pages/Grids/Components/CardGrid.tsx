@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, User, Clock, ArrowRight } from 'lucide-react';
-import styles from './CardGrid.module.scss';
+import styles from './cardGrid.module.scss';
 
 const CardGrid = (): React.ReactElement => {
   const cards = [

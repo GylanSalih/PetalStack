@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Code, Zap, Shield, Palette } from 'lucide-react';
-import styles from './PageOne.module.scss';
+import styles from './pageOne.module.scss';
 
 const PageOne = (): React.ReactElement => {
   return (

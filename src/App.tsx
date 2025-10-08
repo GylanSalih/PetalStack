@@ -1,22 +1,22 @@
 // App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { DesktopHeader } from './components/header/DesktopHeader';
-import Footer from './components/footer/Footer';
-import ScrollToTop from './components/ScrollToTop';
+import { DesktopHeader } from './components/header/desktopHeader';
+import Footer from './components/footer/footer';
+import ScrollToTop from './components/scrollToTop';
 import { Moon, Sun } from 'lucide-react';
-import Home from './pages/home/Home';
-import PageOne from './pages/page-one/PageOne';
-import PageTwo from './pages/page-two/PageTwo';
-import PageThree from './pages/page-three/PageThree';
-import Grids from './pages/grids/Grids';
-import Blog from './pages/blog/Blog';
-import BlogGrid from './pages/blog/blog-grid/BlogGrid';
-import BlogPost from './pages/blog/blog-post/BlogPost';
-import styles from './App.module.scss';
+import Home from './pages/home/home';
+import PageOne from './pages/page-one/pageOne';
+import PageTwo from './pages/page-two/pageTwo';
+import PageThree from './pages/page-three/pageThree';
+import Grids from './pages/grids/grids';
+import Blog from './pages/blog/blog';
+import BlogGrid from './pages/blog/blog-grid/blogGrid';
+import BlogPost from './pages/blog/blog-post/blogPost';
+import styles from './app.module.scss';
 
 import './fonts/fonts.css';
-import { DarkModeProvider, useDarkMode } from './contexts/DarkModeContext';
+import { DarkModeProvider, useDarkMode } from './contexts/darkModeContext';
 
 const AppContent = (): React.ReactElement => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
@@ -47,6 +47,7 @@ const AppContent = (): React.ReactElement => {
           <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
 
+        
         <Footer />
       </Router>
     </div>

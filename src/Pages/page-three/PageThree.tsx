@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Zap, Shield, Code, Rocket } from 'lucide-react';
-import styles from './PageThree.module.scss';
+import styles from './pageThree.module.scss';
 
 const PageThree = (): React.ReactElement => {
   return (

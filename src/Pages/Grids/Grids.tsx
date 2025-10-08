@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Grids.module.scss';
-import CardGrid from './components/CardGrid';
-import MasonryGrid from './components/MasonryGrid';
+import styles from './grids.module.scss';
+import CardGrid from './components/cardGrid';
+import MasonryGrid from './components/masonryGrid';
 
 const Grids = (): React.ReactElement => {
   return (
