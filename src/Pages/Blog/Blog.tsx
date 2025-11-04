@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Users, Calendar } from 'lucide-react';
-import { useDarkMode } from '../../contexts/darkModeContext';
+import { useDarkMode } from '../../contexts/DarkModeContext';
 import { blogPosts, blogCategories } from '../../data/blogData';
 import styles from './blog.module.scss';
 

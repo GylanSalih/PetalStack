@@ -1,0 +1,486 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1035;
+  backdrop-filter: blur(2px);
+}
+
+.cartSidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  max-width: 90vw;
+  height: 100vh;
+  background: white;
+  color: #000000;
+  z-index: 1040;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #666666;
+  }
+}
+
+.freeShipping {
+  padding: 10px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.shippingInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.shippingIcon {
+  margin-top: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.shippingText {
+  flex: 1;
+}
+
+.shippingText p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  color: #000000;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  width: 20%;
+  height: 100%;
+  background: #6b7280;
+  border-radius: 2px;
+}
+
+.deliveryInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.deliveryDot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.deliveryInfo p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  color: #000000;
+  margin: 0;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.emptyCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  padding: 2rem;
+
+  p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--color-muted-foreground, #888888);
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.cartItems {
+  padding: 0;
+}
+
+.cartItem {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.itemImage {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  background: #f3f4f6;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.itemDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.itemName {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.itemPrice {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  color: #000000;
+  margin: 0;
+  font-weight: 500;
+}
+
+.itemColor {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  color: #666666;
+  margin: 0;
+}
+
+.itemSize {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  color: #666666;
+  margin: 0;
+}
+
+.quantitySection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.25rem 0;
+}
+
+.quantityLabel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  color: #666666;
+}
+
+.itemPriceRight {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #000000;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.quantityButton {
+  background: transparent;
+  border: none;
+  color: #000000;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #f3f4f6;
+  }
+}
+
+.quantity {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  color: #000000;
+  min-width: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.removeButton {
+  background: transparent;
+  border: none;
+  color: #666666;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  margin-top: 0.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  &:hover {
+    color: #000000;
+  }
+}
+
+.footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  background: white;
+}
+
+.shippingCosts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.75rem;
+    color: #666666;
+  }
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #000000;
+  }
+}
+
+.checkoutButton {
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+
+  &:hover {
+    background: #333333;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.paymentMethods {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.paymentLogos {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.75rem;
+    color: #666666;
+    font-weight: 500;
+  }
+}
+
+// GSAP handles all animations now
+
+// Dark mode support
+[data-theme='dark'] {
+  .cartSidebar {
+    background: var(--color-background, #000000);
+    color: var(--color-foreground, #ffffff);
+    border-left-color: var(--color-border, #333333);
+  }
+
+  .header {
+    border-bottom-color: var(--color-border, #333333);
+  }
+
+  .title {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .closeButton {
+    color: var(--color-foreground, #ffffff);
+
+    &:hover {
+      color: var(--color-muted-foreground, #cccccc);
+    }
+  }
+
+  .freeShipping {
+    background: var(--color-muted, #1a1a1a);
+    border-bottom-color: var(--color-border, #333333);
+
+    p {
+      color: var(--color-muted-foreground, #888888);
+    }
+  }
+
+  .cartItem {
+    border-bottom-color: var(--color-border, #333333);
+  }
+
+  .itemImage {
+    background: var(--color-muted, #1a1a1a);
+  }
+
+  .itemName {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .itemPrice {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .itemSize {
+    color: var(--color-muted-foreground, #888888);
+  }
+
+  .quantityButton {
+    border-color: var(--color-border, #333333);
+    color: var(--color-foreground, #ffffff);
+
+    &:hover {
+      border-color: var(--color-foreground, #ffffff);
+      background: var(--color-muted, #1a1a1a);
+    }
+  }
+
+  .quantity {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .removeButton {
+    color: var(--color-muted-foreground, #888888);
+
+    &:hover {
+      color: var(--color-foreground, #ffffff);
+    }
+  }
+
+  .footer {
+    background: var(--color-background, #000000);
+    border-top-color: var(--color-border, #333333);
+  }
+
+  .taxes p {
+    color: var(--color-muted-foreground, #888888);
+  }
+
+  .checkoutButton {
+    background: var(--color-foreground, #ffffff);
+    color: var(--color-background, #000000);
+
+    &:hover {
+      background: var(--color-muted-foreground, #cccccc);
+    }
+  }
+
+  .shippingCosts {
+    span {
+      color: var(--color-muted-foreground, #888888);
+    }
+  }
+
+  .total {
+    span {
+      color: var(--color-foreground, #ffffff);
+    }
+  }
+
+  .paymentLogos {
+    span {
+      color: var(--color-muted-foreground, #888888);
+    }
+  }
+}

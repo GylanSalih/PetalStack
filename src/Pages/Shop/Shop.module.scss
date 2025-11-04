@@ -1,0 +1,259 @@
+.shop {
+  min-height: 100vh;
+  background: var(--color-background, #000000);
+  color: var(--color-foreground, #ffffff);
+  padding-top: 80px; // Account for header
+}
+
+/* Filter Header Styles */
+.filterHeader {
+  background: transparent;
+  padding: 10px 10px 10px 20px;
+  margin: 0;
+  position: relative;
+}
+
+.titleRow {
+  margin-bottom: 0.5rem;
+}
+
+.pageTitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-foreground, #ffffff);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.filterToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-foreground, #ffffff);
+  border: 1px solid var(--color-border, #333333);
+  padding: 0.5rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background: var(--color-foreground, #ffffff);
+    color: var(--color-background, #000000);
+    border-color: var(--color-foreground, #ffffff);
+  }
+}
+
+.productCount {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-foreground, #ffffff);
+  text-transform: uppercase;
+}
+
+.sortGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sortLabel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-foreground, #ffffff);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sortSelect {
+  background: transparent;
+  color: var(--color-foreground, #ffffff);
+  border: 1px solid var(--color-border, #333333);
+  padding: 0.5rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-foreground, #ffffff);
+  }
+}
+
+.header {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  background: var(--color-background, #000000);
+
+  h1 {
+    font-family: 'Arvo', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--color-foreground, #ffffff);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-muted-foreground, #888888);
+    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.shopContainer {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 0 2rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0; // Prevents flex item from overflowing
+}
+
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border, #333333);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
+
+.productCount {
+  span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-foreground, #ffffff);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.sortContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-foreground, #ffffff);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.sortSelect {
+  background: var(--color-background, #000000);
+  color: var(--color-foreground, #ffffff);
+  border: 1px solid var(--color-border, #333333);
+  padding: 0.5rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  min-width: 180px;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary, #ffffff);
+  }
+
+  option {
+    background: var(--color-background, #000000);
+    color: var(--color-foreground, #ffffff);
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .shop {
+    background: var(--color-background, #000000);
+  }
+
+  .header {
+    h1 {
+      color: var(--color-foreground, #ffffff);
+    }
+
+    p {
+      color: var(--color-muted-foreground, #888888);
+    }
+  }
+
+  .productCount span {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .sortContainer label {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .sortSelect {
+    background: var(--color-background, #000000);
+    color: var(--color-foreground, #ffffff);
+    border-color: var(--color-border, #333333);
+
+    option {
+      background: var(--color-background, #000000);
+      color: var(--color-foreground, #ffffff);
+    }
+  }
+}

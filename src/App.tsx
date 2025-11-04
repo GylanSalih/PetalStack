@@ -1,22 +1,26 @@
 // App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { DesktopHeader } from './components/header/desktopHeader';
-import Footer from './components/footer/footer';
-import ScrollToTop from './components/scrollToTop';
+import { DesktopHeader } from './components/Header/DesktopHeader';
+import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { Moon, Sun } from 'lucide-react';
-import Home from './pages/home/home';
-import PageOne from './pages/page-one/pageOne';
-import PageTwo from './pages/page-two/pageTwo';
-import PageThree from './pages/page-three/pageThree';
-import Grids from './pages/grids/grids';
-import Blog from './pages/blog/blog';
-import BlogGrid from './pages/blog/blog-grid/blogGrid';
-import BlogPost from './pages/blog/blog-post/blogPost';
+import Home from './Pages/Home/Home';
+// @ts-expect-error - Shop.jsx is a JSX file, not TypeScript
+import Shop from './Pages/Shop/Shop';
+import Product from './Pages/Product/Product';
+// @ts-expect-error - Login.jsx is a JSX file, not TypeScript
+import Login from './Pages/Login/Login';
 import styles from './app.module.scss';
 
 import './fonts/fonts.css';
-import { DarkModeProvider, useDarkMode } from './contexts/darkModeContext';
+import { DarkModeProvider, useDarkMode } from './contexts/DarkModeContext';
+import { FilterProvider } from './contexts/FilterContext';
+import { WishlistProvider } from './contexts/WishlistContext';
+// @ts-expect-error - CartContext.jsx is a JSX file, not TypeScript
+import { CartProvider } from './contexts/CartContext';
+// @ts-expect-error - CartSidebar.jsx is a JSX file, not TypeScript
+import CartSidebar from './components/CartSidebar/CartSidebar';
 
 const AppContent = (): React.ReactElement => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
@@ -38,15 +42,13 @@ const AppContent = (): React.ReactElement => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/page-1" element={<PageOne />} />
-          <Route path="/page-2" element={<PageTwo />} />
-          <Route path="/page-3" element={<PageThree />} />
-          <Route path="/grids" element={<Grids />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/grid" element={<BlogGrid />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/products/:slug" element={<Product />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
 
+        {/* Cart Sidebar */}
+        <CartSidebar />
         
         <Footer />
       </Router>
@@ -57,7 +59,13 @@ const AppContent = (): React.ReactElement => {
 const App = (): React.ReactElement => {
   return (
     <DarkModeProvider>
-      <AppContent />
+      <FilterProvider>
+        <WishlistProvider>
+          <CartProvider>
+            <AppContent />
+          </CartProvider>
+        </WishlistProvider>
+      </FilterProvider>
     </DarkModeProvider>
   );
 };

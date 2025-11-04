@@ -1,0 +1,400 @@
+.shopFilter {
+  background: transparent;
+  padding: 10px 10px 10px 20px;
+  margin: 0;
+  position: relative;
+}
+
+/* Headerzeile */
+.titleRow {
+  margin-bottom: 0.5rem;
+}
+
+.pageTitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-foreground, #1f2937);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Controls */
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.filterToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-foreground, #1f2937);
+  border: 1px solid var(--color-border, #d1d5db);
+  padding: 0.5rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background: var(--color-foreground, #1f2937);
+    color: #ffffff;
+    border-color: var(--color-foreground, #1f2937);
+  }
+}
+
+.productCount {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-foreground, #1f2937);
+  text-transform: uppercase;
+}
+
+.sortGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sortLabel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-foreground, #1f2937);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Overlay wie CartSidebar - mit Blur-Effekt nur auf Hintergrund */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  /* keine CSS-Animationen – GSAP steuert opacity */
+}
+
+/* Panel wie CartSidebar */
+.slider {
+  position: relative;
+  width: 400px;
+  max-width: 90vw;
+  height: 100vh;
+  background: #ffffff;
+  color: #000000;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+
+  /* Filter bleibt scharf - kein Blur */
+  filter: none !important;
+  backdrop-filter: none !important;
+
+  /* Performance-Hinweise für GSAP */
+  will-change: transform;
+  backface-visibility: hidden;
+  contain: layout paint;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
+}
+
+/* Header im Slider */
+.sliderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-foreground, #1f2937);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--color-foreground, #1f2937);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: var(--color-primary, #3b82f6);
+  }
+}
+
+/* Inhalt */
+.sliderContent {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.filterSection {
+  margin-bottom: 2rem;
+
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-foreground, #1f2937);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+}
+
+.categoryList,
+.sizeList,
+.colorList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: var(--color-foreground, #1f2937);
+  text-transform: uppercase;
+
+  input[type='checkbox'] {
+    width: 1rem;
+    height: 1rem;
+    background: transparent;
+    border: 1px solid var(--color-border, #d1d5db);
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+
+    &:checked {
+      background: var(--color-foreground, #1f2937);
+      border-color: var(--color-foreground, #1f2937);
+
+      &::after {
+        content: '✓';
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+    }
+
+    &:hover {
+      border-color: var(--color-foreground, #1f2937);
+    }
+  }
+
+  span {
+    flex: 1;
+    font-weight: 400;
+  }
+}
+
+.sortSelect {
+  width: 100%;
+  background: transparent;
+  color: var(--color-foreground, #1f2937);
+  border: 1px solid var(--color-border, #d1d5db);
+  padding: 0.75rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-foreground, #1f2937);
+  }
+}
+
+/* Footer im Slider */
+.sliderFooter {
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-border, #e5e7eb);
+  display: flex;
+  gap: 1rem;
+}
+
+.clearButton {
+  flex: 1;
+  background: transparent;
+  color: var(--color-foreground, #1f2937);
+  border: 1px solid var(--color-border, #d1d5db);
+  padding: 0.75rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background: var(--color-foreground, #1f2937);
+    color: #ffffff;
+    border-color: var(--color-foreground, #1f2937);
+  }
+}
+
+.applyButton {
+  flex: 1;
+  background: var(--color-foreground, #1f2937);
+  color: #ffffff;
+  border: 1px solid var(--color-foreground, #1f2937);
+  padding: 0.75rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background: var(--color-primary, #3b82f6);
+    border-color: var(--color-primary, #3b82f6);
+  }
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+  .shopFilter {
+    border: 1px solid var(--color-border, #333333);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .filterSection {
+    margin-bottom: 2rem;
+
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .slider {
+    background: var(--color-background, #000000);
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .sliderHeader {
+    border-bottom-color: var(--color-border, #333333);
+
+    h3 {
+      color: var(--color-foreground, #ffffff);
+    }
+  }
+
+  .closeButton {
+    color: var(--color-foreground, #ffffff);
+
+    &:hover {
+      color: var(--color-muted-foreground, #cccccc);
+    }
+  }
+
+  .sliderContent {
+    /* nichts animieren – GSAP übernimmt */
+  }
+
+  .filterSection h4 {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .checkboxLabel {
+    color: var(--color-foreground, #ffffff);
+
+    input[type='checkbox'] {
+      border-color: var(--color-border, #666666);
+
+      &:checked {
+        background: var(--color-foreground, #ffffff);
+        border-color: var(--color-foreground, #ffffff);
+
+        &::after {
+          color: var(--color-background, #000000);
+        }
+      }
+
+      &:hover {
+        border-color: var(--color-foreground, #ffffff);
+      }
+    }
+  }
+
+  .clearButton {
+    color: var(--color-foreground, #ffffff);
+    border-color: var(--color-border, #666666);
+
+    &:hover {
+      background: var(--color-foreground, #ffffff);
+      color: var(--color-background, #000000);
+      border-color: var(--color-foreground, #ffffff);
+    }
+  }
+
+  .applyButton {
+    background: var(--color-foreground, #ffffff);
+    color: var(--color-background, #000000);
+
+    &:hover {
+      background: var(--color-muted-foreground, #cccccc);
+      border-color: var(--color-muted-foreground, #cccccc);
+    }
+  }
+
+  .sortSelect {
+    color: var(--color-foreground, #ffffff);
+    border-color: var(--color-border, #666666);
+
+    &:focus {
+      border-color: var(--color-foreground, #ffffff);
+    }
+  }
+}
+
+/* Reduced motion: sofort ein-/ausblenden, GSAP kann das berücksichtigen */
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    backdrop-filter: none;
+  }
+}

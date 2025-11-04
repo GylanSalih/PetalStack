@@ -11,29 +11,31 @@
 </div>
 
 <!-- Badges Shields -->
-[contributors-shield]: https://custom-icon-badges.demolab.com/github/contributors/GylanSalih/PetalStack?color=FF0000&logo=group&label=Contributors&logoColor=white&style=for-the-badge&labelColor=000000
-[forks-shield]: https://custom-icon-badges.demolab.com/github/forks/GylanSalih/PetalStack?color=FF0000&logo=repo-forked&label=Forks&logoColor=white&style=for-the-badge&labelColor=000000
-[stars-shield]: https://custom-icon-badges.demolab.com/github/stars/GylanSalih/PetalStack?color=FF0000&label=Stars&style=for-the-badge&logo=star&logoColor=white&labelColor=000000
-[issues-shield]: https://custom-icon-badges.demolab.com/github/issues/GylanSalih/PetalStack?color=FF0000&logo=issue-opened&label=Issues&logoColor=white&labelColor=000000&style=for-the-badge
-[license-shield]: https://custom-icon-badges.demolab.com/github/license/GylanSalih/PetalStack?color=FF0000&logo=law&label=License&logoColor=white&style=for-the-badge&labelColor=000000
+
+[contributors-shield]: https://custom-icon-badges.demolab.com/github/contributors/GylanSalih/Niedryuz?color=FF0000&logo=group&label=Contributors&logoColor=white&style=for-the-badge&labelColor=000000
+[forks-shield]: https://custom-icon-badges.demolab.com/github/forks/GylanSalih/Niedryuz?color=FF0000&logo=repo-forked&label=Forks&logoColor=white&style=for-the-badge&labelColor=000000
+[stars-shield]: https://custom-icon-badges.demolab.com/github/stars/GylanSalih/Niedryuz?color=FF0000&label=Stars&style=for-the-badge&logo=star&logoColor=white&labelColor=000000
+[issues-shield]: https://custom-icon-badges.demolab.com/github/issues/GylanSalih/Niedryuz?color=FF0000&logo=issue-opened&label=Issues&logoColor=white&labelColor=000000&style=for-the-badge
+[license-shield]: https://custom-icon-badges.demolab.com/github/license/GylanSalih/Niedryuz?color=FF0000&logo=law&label=License&logoColor=white&style=for-the-badge&labelColor=000000
 
 <!-- Badges Links -->
-[contributors-url]: https://github.com/GylanSalih/PetalStack/graphs/contributors
-[forks-url]: https://github.com/GylanSalih/PetalStack/network/members
-[stars-url]: https://github.com/GylanSalih/PetalStack/stargazers
-[issues-url]: https://github.com/GylanSalih/PetalStack/issues
-[license-url]: https://github.com/GylanSalih/PetalStack/blob/main/LICENSE
+
+[contributors-url]: https://github.com/GylanSalih/Niedryuz/graphs/contributors
+[forks-url]: https://github.com/GylanSalih/Niedryuz/network/members
+[stars-url]: https://github.com/GylanSalih/Niedryuz/stargazers
+[issues-url]: https://github.com/GylanSalih/Niedryuz/issues
+[license-url]: https://github.com/GylanSalih/Niedryuz/blob/main/LICENSE
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/GylanSalih/PetalStack">
-    <img src="docs/images/16.08.25_home.png" alt="PetalStack Preview" width="400" style="margin-right: 10px;">
-    <img src="docs/images/16.08.25_home2.png" alt="PetalStack Preview 2" width="400" style="margin-left: 10px;">
+  <a href="https://github.com/GylanSalih/Niedryuz">
+    <img src="docs/images/16.08.25_home.png" alt="Niedryuz Preview" width="400" style="margin-right: 10px;">
+    <img src="docs/images/16.08.25_home2.png" alt="Niedryuz Preview 2" width="400" style="margin-left: 10px;">
   </a>
 
 <h3 align="center">
- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Cat%20with%20Heart-Eyes.png" alt="Smiling Cat with Heart-Eyes" width="25" height="25" /> PetalStack - React TypeScript SASS Boilerplate
+ <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Cat%20with%20Heart-Eyes.png" alt="Smiling Cat with Heart-Eyes" width="25" height="25" /> Niedryuz - Modern Fashion E-Commerce Platform
 </h3>
 
 <p align="center">
@@ -45,9 +47,9 @@
     <br />
     <a href="#demo">View Demo</a>
     ·
-    <a href="https://github.com/GylanSalih/PetalStack/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/GylanSalih/Niedryuz/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/GylanSalih/PetalStack/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/GylanSalih/Niedryuz/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
 </p>
 </div>
 
@@ -70,19 +72,30 @@
 <span>
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" alt="Robot" width="25" height="25" />
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="25" height="25" />
-Mission: Modern React TypeScript SASS Boilerplate. Crafted with passion for the #OpenSource community. Free to use and customize. Production-ready starting template that helps developers jump-start their projects quickly!
+Niedryuz is a modern, responsive e-commerce platform built with React, TypeScript, and SASS. It features a complete shopping experience with cart management, wishlist functionality, user authentication, and a beautiful dark/light theme system.
 
-&nbsp;  <!-- Leerraum zwischen den Abschnitten -->
+&nbsp; <!-- Leerraum zwischen den Abschnitten -->
 
 <h2 id="features"><span style="display: inline-flex; align-items: center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> Features</span></h2>
 
+### 🛒 E-Commerce Features
+
+- **Shopping Cart** with persistent storage
+- **Wishlist** functionality with heart/bookmark icons
+- **Product Catalog** with filtering and search
+- **User Authentication** with dashboard
+- **Responsive Design** for all devices
+
 ### 🎯 Core Technologies
+
 - **React 18** with modern hooks and concurrent features
 - **TypeScript 5.9** with strict configuration for type safety
 - **SASS/SCSS** with CSS Modules for component-scoped styling
 - **Vite** for lightning-fast development and optimized builds
+- **GSAP** for smooth animations and transitions
 
 ### 🛠️ Development Experience
+
 - **Hot Module Replacement** for instant feedback during development
 - **Path Aliases** (`@/*` for `src/*`) for cleaner imports
 - **ESLint + Prettier** for consistent code quality
@@ -90,16 +103,20 @@ Mission: Modern React TypeScript SASS Boilerplate. Crafted with passion for the 
 - **Source Maps** for enhanced debugging
 
 ### 🎨 UI & UX
+
 - **Dark/Light Mode** with system preference detection
 - **Responsive Design** optimized for all devices
 - **Lucide React Icons** for modern, consistent iconography
 - **CSS Variables** for dynamic theming
-- **Smooth Transitions** for enhanced user experience
+- **Smooth Transitions** with GSAP animations
+- **Cart Sidebar** with smooth slide animations
 
 ### 📁 Architecture
+
 - **Component-Based** structure with SASS modules
-- **Context API** for state management (Dark Mode)
+- **Context API** for state management (Cart, Wishlist, Auth, Theme)
 - **React Router** for client-side navigation
+- **LocalStorage** for data persistence
 - **Modular SASS** with variables and mixins
 
 <p align="right">
@@ -128,6 +145,9 @@ Mission: Modern React TypeScript SASS Boilerplate. Crafted with passion for the 
   <li>
     <img alt="React Router Badge" title="React Router" src="https://custom-icon-badges.demolab.com/badge/-React%20Router-000000?style=for-the-badge&logo=react-router&logoColor=ffffff&labelColor=FF0000">
   </li>
+  <li>
+    <img alt="GSAP Badge" title="GSAP" src="https://custom-icon-badges.demolab.com/badge/-GSAP-000000?style=for-the-badge&logo=gsap&logoColor=ffffff&labelColor=FF0000">
+  </li>
 </ul>
 
 </div>
@@ -144,10 +164,10 @@ To clone and run this application, you'll need <a href="https://git-scm.com">Git
 
 <ol>
   <li><strong>Clone the repository:</strong>
-    <pre><code>git clone https://github.com/GylanSalih/PetalStack.git</code></pre>
+    <pre><code>git clone https://github.com/GylanSalih/Niedryuz.git</code></pre>
   </li>
   <li><strong>Navigate into the repository:</strong>
-    <pre><code>cd PetalStack</code></pre>
+    <pre><code>cd Niedryuz</code></pre>
   </li>
   <li><strong>Install dependencies:</strong>
     <pre><code>npm install</code></pre>
@@ -170,8 +190,6 @@ To clone and run this application, you'll need <a href="https://git-scm.com">Git
   </a>
 </p>
 
-
-
 <p align="right">
   <a href="#readme-top">
 <img src="https://custom-icon-badges.demolab.com/badge/-Back%20to%20top-000000?style=for-the-badge&logo=upptime&logoColor=ffffff&labelColor=FF0000" alt="Back to top">
@@ -180,7 +198,7 @@ To clone and run this application, you'll need <a href="https://git-scm.com">Git
 
 ## <span style="display: inline-flex; align-items: center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> Contributing</span>
 
-We welcome contributions to **PetalStack**! 🎉 Whether it's fixing bugs, improving documentation, or adding new features, your help is always appreciated.
+We welcome contributions to **Niedryuz**! 🎉 Whether it's fixing bugs, improving documentation, or adding new features, your help is always appreciated.
 
 ### How to Contribute
 
@@ -241,9 +259,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
     <img src="https://custom-icon-badges.demolab.com/badge/Website-000000?style=for-the-badge&logo=googlechrome&logoColor=ffffff&labelColor=FF0000" alt="Website Badge">
   </a>
   <br><br>
-  
 
-  
   <p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Cat.png" alt="Grinning Cat" width="25" height="25" /> If you like this project, please consider starring it on GitHub! Your support is greatly appreciated! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Cat%20with%20Smiling%20Eyes.png" alt="Grinning Cat with Smiling Eyes" width="25" height="25" /></p>
 </div>
 

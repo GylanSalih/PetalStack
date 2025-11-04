@@ -1,0 +1,760 @@
+.cart {
+  min-height: 100vh;
+  background: var(--color-background, #000000);
+  color: var(--color-foreground, #ffffff);
+  padding-top: 80px; // Account for header
+  padding-bottom: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+
+  h1 {
+    font-family: 'Arvo', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--color-foreground, #ffffff);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: var(--color-muted-foreground, #888888);
+    margin: 0;
+  }
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 4rem 2rem;
+
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-foreground, #ffffff);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: var(--color-muted-foreground, #888888);
+    margin: 0;
+  }
+}
+
+.cartContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cartItem {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border, #333333);
+  background: var(--color-card, #0a0a0a);
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.itemImage {
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  background: var(--color-muted, #1a1a1a);
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.itemDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemName {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-foreground, #ffffff);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: block;
+
+  &:hover {
+    color: var(--color-muted-foreground, #cccccc);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-transform: inherit;
+    letter-spacing: inherit;
+  }
+}
+
+.itemSize {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground, #888888);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.itemPrice {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  color: var(--color-foreground, #ffffff);
+  margin: 0;
+  font-weight: 500;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.quantityLabel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground, #888888);
+  text-transform: uppercase;
+  min-width: 80px;
+}
+
+.quantityButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-border, #333333);
+  border-radius: 4px;
+  padding: 0.25rem;
+}
+
+.quantityButton {
+  background: transparent;
+  border: none;
+  color: var(--color-foreground, #ffffff);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+
+  &:hover {
+    background: var(--color-muted, #1a1a1a);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.quantityValue {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-foreground, #ffffff);
+  font-weight: 500;
+  min-width: 20px;
+  text-align: center;
+}
+
+.removeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 0.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+
+  &:active {
+    background: #ffffff;
+    color: #000000;
+    transform: scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.cartSummary {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.summaryContent {
+  border: 1px solid var(--color-border, #333333);
+  background: var(--color-card, #0a0a0a);
+  padding: 2rem;
+
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-foreground, #ffffff);
+    margin: 0 0 1.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+
+  span {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  strong {
+    color: var(--color-foreground, #ffffff);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border, #333333);
+  margin: 1.5rem 0;
+}
+
+.checkoutButton {
+  width: 100%;
+  background: var(--color-foreground, #ffffff);
+  color: var(--color-background, #000000);
+  border: none;
+  padding: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1.5rem;
+
+  &:hover {
+    background: var(--color-muted-foreground, #cccccc);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Coupon Section
+.couponSection {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border, #333333);
+
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-foreground, #ffffff);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.couponInput {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.couponField {
+  flex: 1;
+  background: var(--color-muted, #1a1a1a);
+  border: 1px solid var(--color-border, #333333);
+  color: var(--color-foreground, #ffffff);
+  padding: 0.75rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary, #ffffff);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  }
+
+  &::placeholder {
+    color: var(--color-muted-foreground, #888888);
+  }
+}
+
+.couponApplyButton {
+  background: var(--color-primary, #ffffff);
+  color: var(--color-background, #000000);
+  border: none;
+  padding: 0.75rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+
+  &:hover {
+    background: var(--color-muted-foreground, #cccccc);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.appliedCoupon {
+  background: var(--color-success, #16a34a);
+  border: 1px solid var(--color-success, #16a34a);
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.couponInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.checkIcon {
+  color: var(--color-background, #000000);
+  flex-shrink: 0;
+}
+
+.couponCode {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-background, #000000);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.couponDescription {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  color: var(--color-background, #000000);
+  opacity: 0.8;
+}
+
+.couponRemoveButton {
+  background: transparent;
+  border: 1px solid var(--color-background, #000000);
+  color: var(--color-background, #000000);
+  padding: 0.25rem 0.75rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--color-background, #000000);
+    color: var(--color-success, #16a34a);
+  }
+}
+
+.testCoupons {
+  margin-top: 1rem;
+}
+
+.testCouponsLabel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground, #888888);
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.testCouponsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.testCoupon {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground, #888888);
+  padding: 0.25rem 0.5rem;
+  background: var(--color-muted, #1a1a1a);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--color-border, #333333);
+    color: var(--color-foreground, #ffffff);
+  }
+}
+
+.discountAmount {
+  color: var(--color-success, #16a34a) !important;
+  font-weight: 600;
+}
+
+// Payment Buttons
+.paymentButtons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.paypalButton {
+  flex: 1;
+  background: #0070ba;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background: #005ea6;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.paypalLogo {
+  height: 20px;
+  width: auto;
+}
+
+.googlePayButton {
+  flex: 1;
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #333333;
+  padding: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background: #1a1a1a;
+    border-color: #555555;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.googlePayLogo {
+  height: 20px;
+  width: 20px;
+}
+
+.taxInfo {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border, #333333);
+
+  p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.75rem;
+    color: var(--color-muted-foreground, #888888);
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .cart {
+    background: var(--color-background, #000000);
+  }
+
+  .header {
+    h1 {
+      color: var(--color-foreground, #ffffff);
+    }
+
+    p {
+      color: var(--color-muted-foreground, #888888);
+    }
+  }
+
+  .emptyCart {
+    h2 {
+      color: var(--color-foreground, #ffffff);
+    }
+
+    p {
+      color: var(--color-muted-foreground, #888888);
+    }
+  }
+
+  .cartItem {
+    border-color: var(--color-border, #333333);
+    background: var(--color-card, #0a0a0a);
+  }
+
+  .itemImage {
+    background: var(--color-muted, #1a1a1a);
+  }
+
+  .itemName {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .itemSize {
+    color: var(--color-muted-foreground, #888888);
+  }
+
+  .itemPrice {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .quantityLabel {
+    color: var(--color-muted-foreground, #888888);
+  }
+
+  .quantityButton {
+    color: var(--color-foreground, #ffffff);
+
+    &:hover {
+      background: var(--color-muted, #1a1a1a);
+    }
+  }
+
+  .quantityValue {
+    color: var(--color-foreground, #ffffff);
+  }
+
+  .removeButton {
+    border-color: var(--color-destructive, #ffffff);
+    color: var(--color-destructive, #ffffff);
+
+    &:hover {
+      background: var(--color-destructive, #ffffff);
+      color: var(--color-background, #000000);
+    }
+  }
+
+  .summaryContent {
+    border-color: var(--color-border, #333333);
+    background: var(--color-card, #0a0a0a);
+
+    h3 {
+      color: var(--color-foreground, #ffffff);
+    }
+  }
+
+  .summaryRow {
+    span {
+      color: var(--color-foreground, #ffffff);
+    }
+
+    strong {
+      color: var(--color-foreground, #ffffff);
+    }
+  }
+
+  .divider {
+    border-top-color: var(--color-border, #333333);
+  }
+
+  .checkoutButton {
+    background: var(--color-foreground, #ffffff);
+    color: var(--color-background, #000000);
+
+    &:hover {
+      background: var(--color-muted-foreground, #cccccc);
+    }
+  }
+
+  .couponField {
+    background: var(--color-muted, #1a1a1a);
+    border-color: var(--color-border, #333333);
+    color: var(--color-foreground, #ffffff);
+
+    &:focus {
+      border-color: var(--color-primary, #ffffff);
+    }
+
+    &::placeholder {
+      color: var(--color-muted-foreground, #888888);
+    }
+  }
+
+  .couponApplyButton {
+    background: var(--color-primary, #ffffff);
+    color: var(--color-background, #000000);
+
+    &:hover {
+      background: var(--color-muted-foreground, #cccccc);
+    }
+  }
+
+  .testCoupon {
+    background: var(--color-muted, #1a1a1a);
+    color: var(--color-muted-foreground, #888888);
+
+    &:hover {
+      background: var(--color-border, #333333);
+      color: var(--color-foreground, #ffffff);
+    }
+  }
+
+  .paypalButton {
+    background: #0070ba;
+    color: #ffffff;
+
+    &:hover {
+      background: #005ea6;
+    }
+  }
+
+  .googlePayButton {
+    background: #000000;
+    color: #ffffff;
+    border-color: #333333;
+
+    &:hover {
+      background: #1a1a1a;
+      border-color: #555555;
+    }
+  }
+
+  .taxInfo {
+    border-top-color: var(--color-border, #333333);
+
+    p {
+      color: var(--color-muted-foreground, #888888);
+    }
+  }
+}

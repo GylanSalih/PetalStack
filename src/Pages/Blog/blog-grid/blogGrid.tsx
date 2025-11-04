@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Filter, Calendar, User, Clock, Tag } from 'lucide-react';
-import { useDarkMode } from '../../../contexts/darkModeContext';
+import { useDarkMode } from '../../../contexts/DarkModeContext';
 import { BlogPost, BlogCategory, BlogFilters } from '../../../types/blog';
 import { blogPosts, blogCategories, searchBlogPosts, getBlogPostsByCategory, getBlogPostsByTag } from '../../../data/blogData';
 import styles from './blogGrid.module.scss';

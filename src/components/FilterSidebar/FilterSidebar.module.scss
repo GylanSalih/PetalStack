@@ -1,0 +1,285 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+  backdrop-filter: blur(8px);
+}
+
+.filterSidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  max-width: 90vw;
+  height: 100vh;
+  background: #ffffff;
+  color: #000000;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+
+  /* Filter bleibt scharf - kein Blur */
+  filter: none !important;
+  backdrop-filter: none !important;
+
+  /* Performance-Hinweise für GSAP */
+  will-change: transform;
+  backface-visibility: hidden;
+  contain: layout paint;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #666666;
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.filterSection {
+  margin-bottom: 2rem;
+
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+}
+
+.categoryList,
+.sizeList,
+.colorList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  text-transform: uppercase;
+
+  input[type='checkbox'] {
+    width: 1rem;
+    height: 1rem;
+    background: transparent;
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+
+    &:checked {
+      background: #000000;
+      border-color: #000000;
+
+      &::after {
+        content: '✓';
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+    }
+
+    &:hover {
+      border-color: #000000;
+    }
+  }
+
+  span {
+    flex: 1;
+    font-weight: 400;
+  }
+}
+
+.sortSelect {
+  width: 100%;
+  background: transparent;
+  color: #000000;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+    border-color: #000000;
+  }
+}
+
+.footer {
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 1rem;
+}
+
+.clearButton {
+  flex: 1;
+  background: transparent;
+  color: #000000;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+  }
+}
+
+.applyButton {
+  flex: 1;
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 0.75rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #333333;
+    border-color: #333333;
+  }
+}
+
+// Dark mode support
+[data-theme='dark'] {
+  .filterSidebar {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  .header {
+    border-bottom-color: #333333;
+
+    h2 {
+      color: #ffffff;
+    }
+  }
+
+  .closeButton {
+    color: #ffffff;
+
+    &:hover {
+      color: #cccccc;
+    }
+  }
+
+  .filterSection h4 {
+    color: #ffffff;
+  }
+
+  .checkboxLabel {
+    color: #ffffff;
+
+    input[type='checkbox'] {
+      border-color: #666666;
+
+      &:checked {
+        background: #ffffff;
+        border-color: #ffffff;
+
+        &::after {
+          color: #000000;
+        }
+      }
+
+      &:hover {
+        border-color: #ffffff;
+      }
+    }
+  }
+
+  .sortSelect {
+    color: #ffffff;
+    border-color: #666666;
+
+    &:focus {
+      border-color: #ffffff;
+    }
+  }
+
+  .clearButton {
+    color: #ffffff;
+    border-color: #666666;
+
+    &:hover {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+    }
+  }
+
+  .applyButton {
+    background: #ffffff;
+    color: #000000;
+
+    &:hover {
+      background: #cccccc;
+      border-color: #cccccc;
+    }
+  }
+}

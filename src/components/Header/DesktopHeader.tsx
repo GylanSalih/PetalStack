@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Twitter, Linkedin, Github, Globe } from 'lucide-react';
+import { Menu, X, Instagram, Twitter, Linkedin, Github, Globe, ShoppingBag } from 'lucide-react';
+// @ts-expect-error - CartContext.jsx is a JSX file, not TypeScript
+import { useCart } from '../../contexts/CartContext';
 import styles from './desktopHeader.module.scss';
 
 const DesktopHeader = (): React.ReactElement => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { openCart, getCartItemCount } = useCart();
+  const cartItemCount = getCartItemCount();
 
   // Handle scroll effect
   useEffect(() => {
@@ -62,36 +66,24 @@ const DesktopHeader = (): React.ReactElement => {
             Home
           </Link>
           <Link 
-            to="/page-1" 
-            className={`${styles.navLink} ${isActive('/page-1') ? styles.active : ''}`}
+            to="/shop" 
+            className={`${styles.navLink} ${isActive('/shop') ? styles.active : ''}`}
           >
-            Page 1
-          </Link>
-          <Link 
-            to="/page-2" 
-            className={`${styles.navLink} ${isActive('/page-2') ? styles.active : ''}`}
-          >
-            Page 2
-          </Link>
-          <Link 
-            to="/page-3" 
-            className={`${styles.navLink} ${isActive('/page-3') ? styles.active : ''}`}
-          >
-            Page 3
-          </Link>
-          <Link 
-            to="/grids" 
-            className={`${styles.navLink} ${isActive('/grids') ? styles.active : ''}`}
-          >
-            Grids
-          </Link>
-          <Link 
-            to="/blog" 
-            className={`${styles.navLink} ${isActive('/blog') ? styles.active : ''}`}
-          >
-            Blog
+            Shop
           </Link>
         </nav>
+
+        {/* Cart Button */}
+        <button 
+          className={styles.cartButton}
+          onClick={openCart}
+          aria-label="Warenkorb öffnen"
+        >
+          <ShoppingBag size={24} />
+          {cartItemCount > 0 && (
+            <span className={styles.cartBadge}>{cartItemCount}</span>
+          )}
+        </button>
 
         {/* Mobile Menu Button */}
         <button 
@@ -123,34 +115,10 @@ const DesktopHeader = (): React.ReactElement => {
                 Home
               </Link>
               <Link 
-                to="/page-1" 
-                className={`${styles.mobileNavLink} ${isActive('/page-1') ? styles.active : ''}`}
+                to="/shop" 
+                className={`${styles.mobileNavLink} ${isActive('/shop') ? styles.active : ''}`}
               >
-                Page 1
-              </Link>
-              <Link 
-                to="/page-2" 
-                className={`${styles.mobileNavLink} ${isActive('/page-2') ? styles.active : ''}`}
-              >
-                Page 2
-              </Link>
-              <Link 
-                to="/page-3" 
-                className={`${styles.mobileNavLink} ${isActive('/page-3') ? styles.active : ''}`}
-              >
-                Page 3
-              </Link>
-              <Link 
-                to="/grids" 
-                className={`${styles.mobileNavLink} ${isActive('/grids') ? styles.active : ''}`}
-              >
-                Grids
-              </Link>
-              <Link 
-                to="/blog" 
-                className={`${styles.mobileNavLink} ${isActive('/blog') ? styles.active : ''}`}
-              >
-                Blog
+                Shop
               </Link>
             </div>
 

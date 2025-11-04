@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, Tag, Share2, Bookmark, Heart } from 'lucide-react';
-import { useDarkMode } from '../../../contexts/darkModeContext';
+import { useDarkMode } from '../../../contexts/DarkModeContext';
 import { BlogPost as BlogPostType } from '../../../types/blog';
 import { getBlogPostBySlug, blogPosts, blogCategories } from '../../../data/blogData';
 import styles from './blogPost.module.scss';
